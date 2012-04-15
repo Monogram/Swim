@@ -2,16 +2,13 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Multi-page template</title>
-    <link href="vendor/jquery.mobile-1.1.0-rc.2.min.css" rel="stylesheet">
-    <link href="app/stylesheets/charts.css" rel="stylesheet">
-    <script type="text/javascript" src="vendor/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="vendor/jquery.mobile-1.1.0-rc.2.min.js"></script>
-    <script type="text/javascript" src="app/javascripts/charts.js"></script>
-    <script type="text/javascript" src="app/javascripts/swim.js"></script>
+    <link href="http://code.jquery.com/mobile/1.1.0-rc.2/jquery.mobile-1.1.0-rc.2.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.0-rc.2/jquery.mobile-1.1.0-rc.2.min.js"></script>
   </head>
 
 
-  <body class="ui-mobile-viewport ui-overlay-c" onload="swim.onLoad();">
+  <body class="ui-mobile-viewport ui-overlay-c">
 
     <!-- Start of first page: #one -->
     <div id="one" data-role="page" data-url="one" tabindex="0" class="ui-page ui-body-b ui-page-active" style="min-height: 551px;">
@@ -25,6 +22,7 @@
           <ul data-role="listview" class="ui-listview">
             <li><a href="#swimming-tips" data-transition="slide">Swimming Tips</a></li>
             <li><a href="#faq" data-transition="slide">FAQ</a></li>
+            <li><a href="#swimming-pool" data-transition="slide">Swimming Pool Information</a></li>
             <li><a href="#schedule" data-transition="slide">Learning Schedule</a></li>
             <li><a href="#calorie" data-transition="slide">Calorie Counter</a></li>
             <li><a href="#graph" data-transition="slide">Graphs</a></li>
@@ -40,12 +38,25 @@
 
       <div data-role="header">
         <a data-icon="back" data-rel="back" data-direction="reverse" class="ui-btn-left">Back</a>
-        <h1>Swimming Tips</h1>
+        <h1>游泳小貼士</h1>
       </div><!-- /header -->
 
       <div data-theme="b" data-role="content">
-        <p>blah blah blah</p>
-        <p>blah blah blah</p>
+        <h3>游泳謬誤逐點捉</h3>
+        <p>1.學游泳一定要有天份先學得曉？
+            這個誤解常令習泳者卻步，認為身型、能力、天份等方面缺憾，以致無法學懂游泳。游泳實質是一種技術，如踏腳踏車、用電腦等，適當的教導，加上練習，所有人            
+            也能學會游泳的。
+        </p>
+        <p>2.游到就得喇，姿勢差，唔駛理喇！
+            很多自學游泳者能在泳池中游來游去，只是動作怪點差點，速度慢一點，認為沒有問題，結果沒有深究。
+            從運動分析現象，游泳姿態是極之重要。不但能提升速度外，亦與肌肉關節活動得宜與否有關。不正確的游泳動作，不但有阻保健功效，甚至令肌肉勞損，傷及
+            腱，造成創傷。因此，正確泳姿亦有助減低游泳受傷的機會。
+        </p>
+        <p>3.冬天太凍了，夏天才可游泳。
+            香港冬天是寒冷的，但學員停止習訓等於進度停頓。經驗所得，夏天游泳冬天停的學員在新泳季，很多需要從頭學起。結果浪費了金錢、時間和努力。
+            香港現有恆溫泳池，氣溫保持在廿五度以上，水溫亦保持在廿五至廿八度。絕對適合游泳溫。試想想，在冬天停止游泳，是否代表哮喘、鼻敏感也會停止發作呢？為
+            身體著想，要改改這個觀念了。
+        </p>
       </div><!-- /content -->
     </div><!-- /page swimming tips -->
 
@@ -55,14 +66,270 @@
 
       <div data-role="header">
         <a data-icon="back" data-rel="back" data-direction="reverse" class="ui-btn-left">Back</a>
-        <h1>FAQ</h1>
+        <h1>常見問題</h1>
       </div><!-- /header -->
 
-      <div data-theme="b" data-role="content">
-        <p>FAQ FAQ</p>
-        <p>blah blah blah</p>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>Q.想學游泳，但浮不起。是否不能學游泳？</h3>
+        <p>A.人類理論上都是能浮在水面的。身體肌肉較多，浮力會差些，但只要練習閉氣、正確的身體動作和踢水動作配合，每一個人也能在水面浮起。換言之，你也能學會
+        游泳的。請教專業教練吧!
+        </p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>Q.游泳時，水衝進鼻孔內，換唔到氣。可以點做？</h3>
+        <p>A.游泳時呼吸的動作有別於陸上呼吸。應該改用口吸鼻呼的方法。其次，呼吸需要配合身體動作，頭出水時吸，頭入水後呼。另外，吸氣張口用力；輕呼慢吹。
+        做到以上三點，情況應該可以改善。
+        </p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>Q.游泳時，水經常入耳朵，聽不到東西，緊張便游不到。可以點做？</h3>
+        <p>A. 這裡有兩重點。一是游泳的心理準備；二是水入耳後的處理。游泳前要了解自己的泳術，若水入耳會緊張，代表需要多加練習，建議在泳池作適應。二是處理方
+        法。水入耳其實問題不大，回岸後處理即可。方法是將頭向相反方向傾側，待水流出。若未成功，可將水灌入該耳孔內後，稍等，再將頭向相反方向傾側，便可清理積
+        水。萬試萬靈。
+        </p>
       </div><!-- /content -->
     </div><!-- /page faq -->
+    
+     <!-- Start of swimming pool info page: #swimming pool -->
+    <div data-theme="b" id="swimming-pool" data-role="page" data-url="swimming-pool">
+
+      <div data-role="header">
+        <a data-icon="back" data-rel="back" data-direction="reverse" class="ui-btn-left">Back</a>
+        <h1>Swimming Pool Information</h1>
+      </div><!-- /header -->
+      
+      <div data-theme="b" data-role="content">
+      	<div class="content-primary">
+      		<ul data-role="listview" class="region-listview">
+      			<li><a href="#areahk" data-transition="slide">香港島</a></li>
+            	<li><a href="#areakln" data-transition="slide">九龍區</a></li>
+                <li><a href="#areant" data-transition="slide">新界區</a></li>
+        	</ul>
+        </div>
+      </div><!-- /content -->
+	</div><!-- /page swimming pool -->
+    
+    <!-- Start of area hk list: # areahk -->
+    <div id="areahk" data-role="page" data-url="areahk">
+      <div data-role="header">
+        <a data-icon="back" data-rel="back" data-direction="reverse" class="ui-btn-left">Back</a>
+        <h1>香港島</h1>
+      </div><!-- /header -->
+      
+        <ul data-role="listview" class="hk-listview">
+            <li data-role="list-divider">南區</li>
+            <li><a href="#paoyuekong" data-transition="slide">包玉剛游泳池</a></li>
+            <li data-role="list-divider">中西區</li>
+            <li><a href="#kennedytown" data-transition="slide">堅尼地城游泳池</a></li>
+            <li><a href="#sunyatsen" data-transition="slide">中山紀念公園游泳池</a></li>
+            <li data-role="list-divider">灣仔區</li>
+            <li><a href="#morrisonhill" data-transition="slide">摩理臣山游泳池</a></li>
+            <li><a href="#wanchai" data-transition="slide">灣仔游泳池</a></li>
+            <li data-role="list-divider">東區</li>
+            <li><a href="#chaiwan" data-transition="slide">柴灣游泳池</a></li>
+            <li><a href="#victoriapark" data-transition="slide">維多利亞公園游泳池</a></li>
+            <li><a href="#islandeast" data-transition="slide">港島東游泳池</a></li>
+            <li><a href="#siusaiwan" data-transition="slide">小西灣游泳池</a></li>
+        </ul> 
+    </div><!-- /page areahk list -->
+    
+    <!-- Start of swiimming pool paoyuekong: #paoyuekong -->
+    <div id="paoyuekong" data-role="page" data-url="paoyuekong">
+      <div data-role="header">
+        <a data-icon="back" data-rel="back" data-direction="reverse" class="ui-btn-left">Back</a>
+        <h1>包玉剛游泳池</h1>
+      </div><!-- /header -->
+      
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>地址</h3>
+        <p>香港黃竹坑深灣道2號</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>查詢電話</h3>
+        <p>2553 3617，2555 0103 +</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>設施</h3>
+        <p>主池、副池、*訓練池、習泳池(2)、跳水池、兒童池 、戲水池 、
+觀眾看台(600個座位)、電子計分板、家庭更衣室
+殘疾人士專用設施：方便通往池面的無阻通道、更衣室、洗手間</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>開放時間</h3>
+        <p>夏季（4月至10月)</p>
+        <p>第一節：上午6時30分至中午12時</p>
+        <p>第二節：下午1時至6時</p>
+        <p>第三節：晚上7時至10時</p>
+        <p>(暫停開放時段：中午12時至下午1時；下午6時至下午7時)</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>配合每年維修工程的暫停開放時間</h3>
+        <p>11月1日至翌年3月31日</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>每周大清潔日</h3>
+        <p>逢周二</p>
+        <p>(如每周大清潔日適逢公眾假期，游泳池會照常開放，而大清潔行動將安排在同周的周一進行)</p>
+      </div>
+    </div><!-- /page swiimming pool paoyuekong -->
+    
+    <!-- Start of swiimming pool paoyuekong: #kennedytown -->
+    <div id="kennedytown" data-role="page" data-url="kennedytown">
+      <div data-role="header">
+        <a data-icon="back" data-rel="back" data-direction="reverse" class="ui-btn-left">Back</a>
+        <h1>堅尼地城游泳池</h1>
+      </div><!-- /header -->
+      
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>地址</h3>
+        <p>香港堅尼地城西祥街北2號</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>查詢電話</h3>
+        <p>2817 7973，2817 4504 +</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>設施</h3>
+        <p>*副池、嬉水池、家庭更衣室
+殘疾人士專用設施: 方便通往池面的無阻通道、更衣室、洗手間</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>開放時間</h3>
+        <p>夏季（4月至10月)</p>
+        <p>第一節：上午6時30分至中午12時</p>
+        <p>第二節：下午1時至5時</p>
+        <p>第三節：晚上6時至10時</p>
+        <p>(暫停開放時段：中午12時至下午1時；下午5時至下午6時)</p>
+        <p>冬季 (11月)</p>
+        <p>上午6時30分至中午12時</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>配合每年維修工程的暫停開放時間</h3>
+        <p>12月1日至翌年3月31日</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>每周大清潔日</h3>
+        <p>逢周三</p>
+        <p>(如每周大清潔日適逢公眾假期，游泳池會照常開放，而大清潔行動將安排在同周的周四進行)</p>
+      </div>
+    </div><!-- /page swiimming pool kennedytown -->
+    
+    <!-- Start of swiimming pool paoyuekong: #sunyatsen -->
+    <div id="sunyatsen" data-role="page" data-url="sunyatsen">
+      <div data-role="header">
+        <a data-icon="back" data-rel="back" data-direction="reverse" class="ui-btn-left">Back</a>
+        <h1>中山紀念公園游泳池</h1>
+      </div><!-- /header -->
+      
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>地址</h3>
+        <p>香港西營盤東邊街北16號</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>查詢電話</h3>
+        <p>2540 6708，2853 2566 +</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>設施</h3>
+        <p>室內設施: 主池、訓練池、觀眾看台(1000個座位)、
+電子計分板、家庭更衣室</p>
+        <p>殘疾人士專用設施: 方便通往池面的無阻通道、更衣室、洗手間</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>開放時間</h3>
+        <p>夏季（4月至10月)</p>
+        <p>第一節：上午6時30分至中午12時</p>
+        <p>第二節：下午1時至5時</p>
+        <p>第三節：晚上6時至10時</p>
+        <p>(暫停開放時段：中午12時至下午1時；下午5時至下午6時)</p>
+        <p>冬季 (11月至3月^) </p>
+        <p>第一節：上午6時30分至中午12時</p>
+        <p>第二節：下午1時至5時</p>
+        <p>第三節：晚上6時至10時</p>
+        <p>(暫停開放時段：中午12時至下午1時；下午5時至下午6時)</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>配合每年維修工程的暫停開放時間</h3>
+        <p>待定</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-theme="b">
+        <h3>每周大清潔日</h3>
+        <p>逢周二</p>
+        <p>(如每周大清潔日適逢公眾假期，游泳池會照常開放，而大清潔行動將安排在同周的周五進行)</p>
+      </div>
+    </div><!-- /page swiimming pool sunyatsen -->
+
+    <!-- Start of area kln list: # areakln -->
+    <div id="areakln" data-role="page" data-url="areakln">
+      <div data-role="header">
+        <a data-icon="back" data-rel="back" data-direction="reverse" class="ui-btn-left">Back</a>
+        <h1>九龍區</h1>
+      </div><!-- /header -->
+      
+      <div data-role="content">
+        <ul data-role="listview" class="kln-listview">
+            <li data-role="list-divider">深水埗</li>
+            <li><a href="#laichikokpark" data-transition="slide">荔枝角公園游泳池</a></li>
+            <li><a href="#leichenguk" data-transition="slide">李鄭屋游泳池</a></li>
+            <li><a href="#shamshuipopark" data-transition="slide">深水埗公園游泳池</a></li>
+            <li data-role="list-divider">油尖旺</li>
+            <li><a href="#kowloonpark" data-transition="slide">九龍公園游泳池</a></li>
+            <li><a href="#taikoktsui" data-transition="slide">大角咀游泳池</a></li>
+            <li data-role="list-divider">九龍城</li>
+            <li><a href="#taiwanshan" data-transition="slide">大環山游泳池</a></li>
+            <li><a href="#homantin" data-transition="slide">何文田游泳池</a></li>
+            <li><a href="#kowloontsai" data-transition="slide">九龍仔游泳池</a></li>
+            <li data-role="list-divider">黃大仙</li>
+            <li><a href="#morsepark" data-transition="slide">摩士公園游泳池</a></li>
+            <li><a href="#hammerhillroad" data-transition="slide">斧山道游泳池</a></li>
+            <li data-role="list-divider">觀塘</li>
+            <li><a href="#jordanvalley" data-transition="slide">佐敦谷游泳池</a></li>
+            <li><a href="#kwuntong" data-transition="slide">觀塘游泳池</a></li>
+        </ul>
+      </div> <!-- content -->     
+    </div><!-- /page areakln list -->
+    
+    <!-- Start of area kln list: # areant -->
+    <div id="areant" data-role="page" data-url="areant">
+      <div data-role="header">
+        <a data-icon="back" data-rel="back" data-direction="reverse" class="ui-btn-left">Back</a>
+        <h1>新界區</h1>
+      </div><!-- /header -->
+      
+      <div data-role="content">
+        <ul data-role="listview" class="nt-listview">
+            <li data-role="list-divider">離島</li>
+            <li><a href="#muiwo" data-transition="slide">梅窩游泳池</a></li>
+            <li><a href="#tungchung" data-transition="slide">東涌游泳池</a></li>
+            <li data-role="list-divider">屯門</li>
+            <li><a href="#jockeyclubyanoitong" data-transition="slide">賽馬會仁愛堂游泳池</a></li>
+            <li><a href="#tuenmun" data-transition="slide">屯門游泳池</a></li>
+            <li data-role="list-divider">元朗</li>
+            <li><a href="#tinshuiwai" data-transition="slide">天水圍游泳池</a></li>
+            <li><a href="#yuenlong" data-transition="slide">元朗游泳池</a></li>
+            <li><a href="#pingshan" data-transition="slide">屏山天水圍游泳池</a></li>
+            <li data-role="list-divider">荃灣</li>
+            <li><a href="#shingmunvalley" data-transition="slide">城門谷游泳池</a></li>
+            <li><a href="#tsuenkingcircuit" data-transition="slide">荃景圍胡忠游泳池</a></li>
+            <li data-role="list-divider">葵青</li>
+            <li><a href="#kwaishing" data-transition="slide">葵盛游泳池</a></li>
+            <li><a href="#northkwaichung" data-transition="slide">北葵涌賽馬會游泳池</a></li>
+            <li><a href="#tsingyi" data-transition="slide">青衣游泳池</a></li>
+            <li data-role="list-divider">北區</li>
+            <li><a href="#fanling" data-transition="slide">粉嶺游泳池</a></li>
+            <li><a href="#sheungshui" data-transition="slide">上水游泳池</a></li>
+            <li data-role="list-divider">大埔</li>
+            <li><a href="#taipo" data-transition="slide">大埔游泳池</a></li>
+            <li data-role="list-divider">沙田</li>
+            <li><a href="#hintin" data-transition="slide">顯田游泳池</a></li>
+            <li><a href="#maonshan" data-transition="slide">馬鞍山游泳池</a></li>
+            <li><a href="#shatinjockeyclub" data-transition="slide">沙田賽馬會游泳池</a></li>
+            <li data-role="list-divider">西貢</li>
+            <li><a href="#saikung" data-transition="slide">西貢游泳池</a></li>
+            <li><a href="#tseungkwano" data-transition="slide">將軍澳游泳池</a></li>
+        </ul>
+      </div> <!-- content -->     
+    </div><!-- /page areant list -->
 
     <!-- Start of schedule page: #schedule -->
     <div data-theme="b" id="schedule" data-role="page" data-url="schedule">
@@ -101,7 +368,8 @@
       </div><!-- /header -->
 
       <div data-theme="b" data-role="content">
-        <canvas id="cumulative_calories_per_date" width="500" height="500"></canvas>
+        <p>GRAPH GRAPH</p>
+        <p>blah blah blah</p>
       </div><!-- /content -->
     </div><!-- /page graph -->
 
