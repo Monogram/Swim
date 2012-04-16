@@ -7,9 +7,9 @@
         ylim: [0, 30],
         XTickLabel: ["Apr 1", "Apr 2", "Apr 3", "Apr 4", "Apr 5", "Apr 6", "Apr 7"],
         YTick: [5, 10, 15, 20, 25, 30],
-        xLabel: "?—¥å?",
-        yLabel: "ç´¯ç?æ¶ˆ?€—?¡è·¯?‡Œ",
-        title: "çµ?œ"
+        xLabel: "æ—¥å­",
+        yLabel: "ç´¯ç©æ¶ˆè€—å¡è·¯é‡Œ",
+        title: "çµæœ"
       }).plot($("#cumulative_calories_per_date").get(0));
     }
   };
