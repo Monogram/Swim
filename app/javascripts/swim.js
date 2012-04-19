@@ -11,6 +11,12 @@
         yLabel: "累積消耗卡路里",
         title: "結果"
       }).plot($("#cumulative_calories_per_date").get(0));
+
+      $("#calendar_container").html(new Calendar({
+        getDayContent: function(date) {
+          return 0;
+        }
+      }).render().el);
     }
   };
 
