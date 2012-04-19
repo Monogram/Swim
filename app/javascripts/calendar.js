@@ -13,6 +13,10 @@
     $(".prev, .next").die("click").live("click", function() {
       self.render(parseInt($(this).attr("month"), 10), parseInt($(this).attr("year"), 10));
     });
+
+    $(".bg").die("click").live("click", function() {
+      window.location = "index.html#calorie";
+    });
   };
 
   Calendar.prototype = {
@@ -91,7 +95,7 @@
     renderBgTable: function(start, end) {
       var tds = [];
       for (var d = start; d <= end; d = Calendar.date.addDays(d, 1)) {
-        tds.push($("<td>").addClass("bg").html(this.getDayContent(d)).get(0));
+        tds.push($("<td>").addClass("bg").attr("date", d.getDate()).attr("month", d.getMonth()).attr("year", d.getFullYear()).html(this.getDayContent(d)).get(0));
       }
       return $("<table>").attr("cellspacing", "0").attr("cellpadding", "0").addClass("bg-table").append(
         $("<tbody>").append(
