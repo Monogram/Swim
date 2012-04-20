@@ -5,8 +5,10 @@
     <link href="vendor/jquery.mobile-1.1.0-rc.2.min.css" rel="stylesheet">
     <link href="app/stylesheets/charts.css" rel="stylesheet">
     <link href="app/stylesheets/calendar.css" rel="stylesheet">
+	<link href="app/stylesheets/jquery.mobile.css" rel="stylesheet">
     <script type="text/javascript" src="vendor/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="vendor/jquery.mobile-1.1.0-rc.2.min.js"></script>
+	<script type="text/javascript" src="vendor/cordova-1.6.1.js"></script>
     <script type="text/javascript" src="app/javascripts/charts.js"></script>
     <script type="text/javascript" src="app/javascripts/calendar.js"></script>
     <script type="text/javascript" src="app/javascripts/swim.js"></script>
@@ -25,13 +27,13 @@
       <div data-role="content" class="ui-content" role="main">
         <div class="content-primary">
           <ul data-role="listview" class="ui-listview">
-            <li><a href="#schedule" data-transition="slide">學習進程</a></li>
-            <li><a href="#calendar" data-transition="slide">月曆</a></li>
-            <li><a href="#graph" data-transition="slide">圖表</a></li>
-            <li><a href="#swimming-pool" data-transition="slide">公眾游泳池資料</a></li>
-            <li><a href="#swimming-tips" data-transition="slide">游泳小貼士</a></li>
-            <li><a href="#faq" data-transition="slide">常見問題</a></li>
-            <li><a href="#register" data-transition="slide">報名</a></li>
+            <li><a href="#schedule" data-transition="none">學習進程</a></li>
+            <li><a href="#calendar" data-transition="none">月曆</a></li>
+            <li><a href="#graph" data-transition="none">圖表</a></li>
+            <li><a href="#swimming-pool" data-transition="none">公眾游泳池資料</a></li>
+            <li><a href="#swimming-tips" data-transition="none">游泳小貼士</a></li>
+            <li><a href="#faq" data-transition="none">常見問題</a></li>
+            <li><a href="#register" data-transition="none">報名</a></li>
           </ul>
         </div>
       </div>
@@ -106,9 +108,9 @@
       <div data-theme="b" data-role="content">
       	<div class="content-primary">
       		<ul data-role="listview" class="region-listview">
-      			<li><a href="#areahk" data-transition="slide">香港島</a></li>
-            	<li><a href="#areakln" data-transition="slide">九龍區</a></li>
-                <li><a href="#areant" data-transition="slide">新界區</a></li>
+      			<li><a href="#areahk" data-transition="none">香港島</a></li>
+            	<li><a href="#areakln" data-transition="none">九龍區</a></li>
+                <li><a href="#areant" data-transition="none">新界區</a></li>
         	</ul>
         </div>
       </div><!-- /content -->
@@ -123,18 +125,18 @@
       
         <ul data-role="listview" class="hk-listview">
             <li data-role="list-divider">南區</li>
-            <li><a href="#paoyuekong" data-transition="slide">包玉剛游泳池</a></li>
+            <li><a href="#paoyuekong" data-transition="none">包玉剛游泳池</a></li>
             <li data-role="list-divider">中西區</li>
-            <li><a href="#kennedytown" data-transition="slide">堅尼地城游泳池</a></li>
-            <li><a href="#sunyatsen" data-transition="slide">中山紀念公園游泳池</a></li>
+            <li><a href="#kennedytown" data-transition="none">堅尼地城游泳池</a></li>
+            <li><a href="#sunyatsen" data-transition="none">中山紀念公園游泳池</a></li>
             <li data-role="list-divider">灣仔區</li>
-            <li><a href="#morrisonhill" data-transition="slide">摩理臣山游泳池</a></li>
-            <li><a href="#wanchai" data-transition="slide">灣仔游泳池</a></li>
+            <li><a href="#morrisonhill" data-transition="none">摩理臣山游泳池</a></li>
+            <li><a href="#wanchai" data-transition="none">灣仔游泳池</a></li>
             <li data-role="list-divider">東區</li>
-            <li><a href="#chaiwan" data-transition="slide">柴灣游泳池</a></li>
-            <li><a href="#victoriapark" data-transition="slide">維多利亞公園游泳池</a></li>
-            <li><a href="#islandeast" data-transition="slide">港島東游泳池</a></li>
-            <li><a href="#siusaiwan" data-transition="slide">小西灣游泳池</a></li>
+            <li><a href="#chaiwan" data-transition="none">柴灣游泳池</a></li>
+            <li><a href="#victoriapark" data-transition="none">維多利亞公園游泳池</a></li>
+            <li><a href="#islandeast" data-transition="none">港島東游泳池</a></li>
+            <li><a href="#siusaiwan" data-transition="none">小西灣游泳池</a></li>
         </ul> 
     </div><!-- /page areahk list -->
     
@@ -596,22 +598,22 @@
       <div data-role="content">
         <ul data-role="listview" class="kln-listview">
             <li data-role="list-divider">深水埗</li>
-            <li><a href="#laichikokpark" data-transition="slide">荔枝角公園游泳池</a></li>
-            <li><a href="#leichenguk" data-transition="slide">李鄭屋游泳池</a></li>
-            <li><a href="#shamshuipopark" data-transition="slide">深水埗公園游泳池</a></li>
+            <li><a href="#laichikokpark" data-transition="none">荔枝角公園游泳池</a></li>
+            <li><a href="#leichenguk" data-transition="none">李鄭屋游泳池</a></li>
+            <li><a href="#shamshuipopark" data-transition="none">深水埗公園游泳池</a></li>
             <li data-role="list-divider">油尖旺</li>
-            <li><a href="#kowloonpark" data-transition="slide">九龍公園游泳池</a></li>
-            <li><a href="#taikoktsui" data-transition="slide">大角咀游泳池</a></li>
+            <li><a href="#kowloonpark" data-transition="none">九龍公園游泳池</a></li>
+            <li><a href="#taikoktsui" data-transition="none">大角咀游泳池</a></li>
             <li data-role="list-divider">九龍城</li>
-            <li><a href="#taiwanshan" data-transition="slide">大環山游泳池</a></li>
-            <li><a href="#homantin" data-transition="slide">何文田游泳池</a></li>
-            <li><a href="#kowloontsai" data-transition="slide">九龍仔游泳池</a></li>
+            <li><a href="#taiwanshan" data-transition="none">大環山游泳池</a></li>
+            <li><a href="#homantin" data-transition="none">何文田游泳池</a></li>
+            <li><a href="#kowloontsai" data-transition="none">九龍仔游泳池</a></li>
             <li data-role="list-divider">黃大仙</li>
-            <li><a href="#morsepark" data-transition="slide">摩士公園游泳池</a></li>
-            <li><a href="#hammerhillroad" data-transition="slide">斧山道游泳池</a></li>
+            <li><a href="#morsepark" data-transition="none">摩士公園游泳池</a></li>
+            <li><a href="#hammerhillroad" data-transition="none">斧山道游泳池</a></li>
             <li data-role="list-divider">觀塘</li>
-            <li><a href="#jordanvalley" data-transition="slide">佐敦谷游泳池</a></li>
-            <li><a href="#kwuntong" data-transition="slide">觀塘游泳池</a></li>
+            <li><a href="#jordanvalley" data-transition="none">佐敦谷游泳池</a></li>
+            <li><a href="#kwuntong" data-transition="none">觀塘游泳池</a></li>
         </ul>
       </div> <!-- content -->     
     </div><!-- /page areakln list -->
@@ -1234,34 +1236,34 @@
       <div data-role="content">
         <ul data-role="listview" class="nt-listview">
             <li data-role="list-divider">離島</li>
-            <li><a href="#muiwo" data-transition="slide">梅窩游泳池</a></li>
-            <li><a href="#tungchung" data-transition="slide">東涌游泳池</a></li>
+            <li><a href="#muiwo" data-transition="none">梅窩游泳池</a></li>
+            <li><a href="#tungchung" data-transition="none">東涌游泳池</a></li>
             <li data-role="list-divider">屯門</li>
-            <li><a href="#jockeyclubyanoitong" data-transition="slide">賽馬會仁愛堂游泳池</a></li>
-            <li><a href="#tuenmun" data-transition="slide">屯門游泳池</a></li>
+            <li><a href="#jockeyclubyanoitong" data-transition="none">賽馬會仁愛堂游泳池</a></li>
+            <li><a href="#tuenmun" data-transition="none">屯門游泳池</a></li>
             <li data-role="list-divider">元朗</li>
-            <li><a href="#tinshuiwai" data-transition="slide">天水圍游泳池</a></li>
-            <li><a href="#yuenlong" data-transition="slide">元朗游泳池</a></li>
-            <li><a href="#pingshan" data-transition="slide">屏山天水圍游泳池</a></li>
+            <li><a href="#tinshuiwai" data-transition="none">天水圍游泳池</a></li>
+            <li><a href="#yuenlong" data-transition="none">元朗游泳池</a></li>
+            <li><a href="#pingshan" data-transition="none">屏山天水圍游泳池</a></li>
             <li data-role="list-divider">荃灣</li>
-            <li><a href="#shingmunvalley" data-transition="slide">城門谷游泳池</a></li>
-            <li><a href="#tsuenkingcircuit" data-transition="slide">荃景圍胡忠游泳池</a></li>
+            <li><a href="#shingmunvalley" data-transition="none">城門谷游泳池</a></li>
+            <li><a href="#tsuenkingcircuit" data-transition="none">荃景圍胡忠游泳池</a></li>
             <li data-role="list-divider">葵青</li>
-            <li><a href="#kwaishing" data-transition="slide">葵盛游泳池</a></li>
-            <li><a href="#northkwaichung" data-transition="slide">北葵涌賽馬會游泳池</a></li>
-            <li><a href="#tsingyi" data-transition="slide">青衣游泳池</a></li>
+            <li><a href="#kwaishing" data-transition="none">葵盛游泳池</a></li>
+            <li><a href="#northkwaichung" data-transition="none">北葵涌賽馬會游泳池</a></li>
+            <li><a href="#tsingyi" data-transition="none">青衣游泳池</a></li>
             <li data-role="list-divider">北區</li>
-            <li><a href="#fanling" data-transition="slide">粉嶺游泳池</a></li>
-            <li><a href="#sheungshui" data-transition="slide">上水游泳池</a></li>
+            <li><a href="#fanling" data-transition="none">粉嶺游泳池</a></li>
+            <li><a href="#sheungshui" data-transition="none">上水游泳池</a></li>
             <li data-role="list-divider">大埔</li>
-            <li><a href="#taipo" data-transition="slide">大埔游泳池</a></li>
+            <li><a href="#taipo" data-transition="none">大埔游泳池</a></li>
             <li data-role="list-divider">沙田</li>
-            <li><a href="#hintin" data-transition="slide">顯田游泳池</a></li>
-            <li><a href="#maonshan" data-transition="slide">馬鞍山游泳池</a></li>
-            <li><a href="#shatinjockeyclub" data-transition="slide">沙田賽馬會游泳池</a></li>
+            <li><a href="#hintin" data-transition="none">顯田游泳池</a></li>
+            <li><a href="#maonshan" data-transition="none">馬鞍山游泳池</a></li>
+            <li><a href="#shatinjockeyclub" data-transition="none">沙田賽馬會游泳池</a></li>
             <li data-role="list-divider">西貢</li>
-            <li><a href="#saikung" data-transition="slide">西貢游泳池</a></li>
-            <li><a href="#tseungkwano" data-transition="slide">將軍澳游泳池</a></li>
+            <li><a href="#saikung" data-transition="none">西貢游泳池</a></li>
+            <li><a href="#tseungkwano" data-transition="none">將軍澳游泳池</a></li>
         </ul>
       </div> <!-- content -->     
     </div><!-- /page areant list -->
