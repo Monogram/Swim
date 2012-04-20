@@ -147,8 +147,10 @@
       this.context.fillText(this.title, this.paddingLeft + (this.canvas.width - this.paddingRight - this.paddingLeft) / 2, this.space);
     },
 
-    plot: function(canvas) {
-      this.canvas = canvas;
+    render: function() {
+      var height = window.innerHeight - 44;
+      this.el = $("<canvas>").attr("id", "cumulative_calories_per_date").css({"height": height});
+      this.canvas = this.el.get(0);
       this.context = this.canvas.getContext("2d");
       this.clear();
       this.renderGrid();
@@ -157,6 +159,7 @@
       this.renderLine();
       this.renderPoints();
       this.renderTitle();
+      return this;
     }
   }
 

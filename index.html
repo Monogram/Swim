@@ -18,7 +18,7 @@
   <body class="ui-mobile-viewport ui-overlay-c" onload="swim.onLoad();">
 
     <!-- Start of first page: #one -->
-    <div id="one" data-role="page" data-url="one" tabindex="0" class="ui-page ui-body-b ui-page-active" style="min-height: 551px;">
+    <div id="one" data-role="page" data-url="one" tabindex="0" class="ui-page ui-body-b ui-page-active">
 
       <div data-role="header" data-position="inline">
         <h1>卓毅游泳會</h1>
@@ -2302,7 +2302,8 @@
       </div><!-- /header -->
 
       <div data-theme="b" data-role="content">
-        <canvas id="cumulative_calories_per_date" width="500" height="500"></canvas>
+        <div id="graph_container">
+        </div>
       </div><!-- /content -->
     </div><!-- /page graph -->
 

@@ -17,6 +17,8 @@
     $(".bg").die("click").live("click", function() {
       window.location = "index.html#calorie";
     });
+
+    this.el.css({"height": window.innerHeight - 44});
   };
 
   Calendar.prototype = {
