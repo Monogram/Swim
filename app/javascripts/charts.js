@@ -17,10 +17,10 @@
     this.XTickLabel = options.XTickLabel || this.XTick;
     this.YTick = options.YTick ? options.YTick : this.ylim;
     this.YTickLabel = options.YTickLabel || this.YTick;
-    this.paddingBottom = options.paddingBottom || 50;
-    this.paddingLeft = options.paddingLeft || 50;
+    this.paddingBottom = options.paddingBottom || 30;
+    this.paddingLeft = options.paddingLeft || 35;
     this.paddingRight = options.paddingRight || 25;
-    this.paddingTop = options.paddingTop || 30;
+    this.paddingTop = options.paddingTop || 10;
     this.frameColor = options.frameColor || "#000000";
     this.gridColor = options.paddingTop || "#AAAAAA";
     this.pointColor = options.pointColor || "#D5DDF3";
@@ -29,8 +29,8 @@
     this.xLabel = options.xLabel || "";
     this.yLabel = options.yLabel || "";
     this.title = options.title || "";
-    this.space = options.space || 10;
-    this.radius = options.radius || 5;
+    this.space = options.space || 5;
+    this.radius = options.radius || 2;
   };
 
   Charts.prototype = {

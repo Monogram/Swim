@@ -14,6 +14,21 @@
       self.render(parseInt($(this).attr("month"), 10), parseInt($(this).attr("year"), 10));
     });
 
+    $(".htitle").die("click").live("click", function() {
+      var month = parseInt($(this).attr("month"), 10);
+      var year = parseInt($(this).attr("year"), 10);
+      $("#graph_container").html(
+        new Charts({
+          x: _.range(1, Calendar.date.getDaysInMonth(year, month) + 1),
+          y: _.range(1, Calendar.date.getDaysInMonth(year, month) + 1),
+          XTick: [1, 5, 10, 15, 20, 25].concat(Calendar.date.getDaysInMonth(year, month)),
+          YTick: [5, 10, 15, 20, 25, 30],
+          xLabel: self.months[month] + " " + year
+        }).render().el
+			);
+      window.location = "index.html#graph";
+    });
+
     $(".bg").die("click").live("click", function() {
       window.location = "index.html#calorie";
     });
@@ -38,7 +53,7 @@
         $("<tbody>").append(
           $("<tr>").append(
             $("<td>").addClass("prev").attr("month", month === 0 ? 11 : month - 1).attr("year", month === 0 ? year - 1 : year).text("<"),
-            $("<td>").addClass("htitle").text(this.months[month] + " " + year),
+            $("<td>").addClass("htitle").attr("month", month).attr("year", year).text(this.months[month] + " " + year),
             $("<td>").addClass("next").attr("month", month === 11 ? 0 : month + 1).attr("year", month === 11 ? year + 1 : year).text(">")
           )
         )
