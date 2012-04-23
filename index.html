@@ -6,8 +6,17 @@
     <link href="app/stylesheets/charts.css" rel="stylesheet">
     <link href="app/stylesheets/calendar.css" rel="stylesheet">
     <link href="app/stylesheets/jquery.mobile.css" rel="stylesheet">
+    <link href="vendor/jquery.ui.datepicker.mobile.css" rel="stylesheet">
     <script type="text/javascript" src="vendor/jquery-1.7.2.min.js"></script>
+    <script>
+      //reset type=date inputs to text
+      $( document ).bind( "mobileinit", function(){
+        $.mobile.page.prototype.options.degradeInputs.date = true;
+      });
+    </script>
     <script type="text/javascript" src="vendor/jquery.mobile-1.1.0-rc.2.min.js"></script>
+    <script type="text/javascript" src="vendor/jQuery.ui.datepicker.js"></script>
+    <script type="text/javascript" src="vendor/jquery.ui.datepicker.mobile.js"></script>
     <script type="text/javascript" src="vendor/underscore-min.js"></script>
     <script type="text/javascript" src="vendor/cordova-1.6.1.js"></script>
     <script type="text/javascript" src="app/javascripts/charts.js"></script>
@@ -2291,6 +2300,28 @@
       </div><!-- /header -->
 
       <div data-theme="b" data-role="content">
+        <input type="date" name="date" id="date" value="" />
+        <div data-role="fieldcontain">
+          <label for="slider-mintues">游泳時間 (分鐘):</label>
+          <input type="range" id="slider-mintues" value="60" min="1" max="1440" data-highlight="true" data-mini="true" />
+        </div>
+        <div data-role="fieldcontain">
+          <label for="slider-meters">游泳距離 (米):</label>
+          <input type="range" id="slider-meters" value="50" min="0" max="72000" step="25" data-highlight="true" data-mini="true" />
+        </div>
+        <fieldset data-role="controlgroup" data-mini="true">
+          <legend>泳式:</legend>
+          <input type="radio" name="strokes" value="breaststroke" id="strokes-breaststroke" checked="checked" />
+          <label for="strokes-breaststroke">蛙式</label>
+          <input type="radio" name="strokes" value="freestyle" id="strokes-freestyle" />
+          <label for="strokes-freestyle">自由式</label>
+          <input type="radio" name="strokes" value="backstroke" id="strokes-backstroke" />
+          <label for="strokes-backstroke">背泳</label>
+          <input type="radio" name="strokes" value="butterfly-stroke" id="strokes-butterfly-stroke" />
+          <label for="strokes-butterfly-stroke">蝶泳</label>
+          <input type="radio" name="strokes" value="other" id="strokes-other" />
+          <label for="strokes-other">其他</label>
+        </fieldset>
       </div><!-- /content -->
     </div><!-- /page calorie -->
 

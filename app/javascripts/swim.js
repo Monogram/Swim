@@ -7,6 +7,8 @@
           return 0;
         }
       }).render().el);
+
+      $("#date").hide();
     }
   };
 
