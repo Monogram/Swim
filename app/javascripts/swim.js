@@ -8,7 +8,7 @@
         }
       }).render().el);
 
-      $("#date").hide();
+      $("#calorie_date").datepicker({ altField: "#" + $(this).attr( "id" ), showOtherMonths: true });
     }
   };
 
