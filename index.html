@@ -7,6 +7,7 @@
     <link href="app/stylesheets/calendar.css" rel="stylesheet">
     <link href="app/stylesheets/footer.css" rel="stylesheet">
     <link href="app/stylesheets/jquery.mobile.css" rel="stylesheet">
+		<link href="app/stylesheets/poster.css" rel="stylesheet">
     <link href="vendor/jquery.ui.datepicker.mobile.css" rel="stylesheet">
     <script type="text/javascript" src="vendor/jquery-1.7.2.min.js"></script>
     <script>
@@ -29,23 +30,15 @@
 
   <body class="ui-mobile-viewport ui-overlay-c" onload="swim.onLoad();">
 
-    <!-- Start of first page: #one -->
-    <div id="one" data-role="page" data-url="one" tabindex="0" class="ui-page ui-body-b ui-page-active">
+    <!-- Start of first page: #poster -->
+    <div id="poster" data-role="page" data-url="one" tabindex="0" class="ui-page ui-body-b ui-page-active">
 
       <div data-role="header" data-position="inline">
         <h1>卓毅游泳會</h1>
       </div>
 
       <div data-role="content" class="ui-content" role="main">
-        <div class="content-primary">
-          <ul data-role="listview" class="ui-listview">
-            <li><a href="#schedule" data-transition="none">學習進程</a></li>
-            <li><a href="#calendar" data-transition="none">月曆</a></li>
-            <li><a href="#swimming-pool" data-transition="none">公眾游泳池資料</a></li>
-            <li><a href="#swimming-tips" data-transition="none">游泳小貼士</a></li>
-            <li><a href="#faq" data-transition="none">常見問題</a></li>
-            <li><a href="#register" data-transition="none">報名</a></li>
-          </ul>
+        <div class="poster">
         </div>
       </div>
       <div data-id="myfooter" data-role="footer" data-position="fixed">
@@ -59,7 +52,7 @@
           </ul>
         </div>
       </div>
-    </div><!-- /page one -->
+    </div><!-- /page poster -->
 
 
     <!-- Start of Swimming tips page: #swimming-tips -->
