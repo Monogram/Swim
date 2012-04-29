@@ -4,6 +4,7 @@
     <title>卓毅游泳會</title>
     <link href="vendor/jquery.mobile-1.1.0-rc.2.min.css" rel="stylesheet">
     <link href="app/stylesheets/charts.css" rel="stylesheet">
+    <link href="app/stylesheets/datepicker.css" rel="stylesheet">
     <link href="app/stylesheets/calendar.css" rel="stylesheet">
     <link href="app/stylesheets/footer.css" rel="stylesheet">
     <link href="app/stylesheets/jquery.mobile.css" rel="stylesheet">
@@ -21,9 +22,11 @@
     <script type="text/javascript" src="vendor/jquery.ui.datepicker.mobile.js"></script>
     <script type="text/javascript" src="vendor/underscore-min.js"></script>
     <script type="text/javascript" src="vendor/cordova-1.6.1.js"></script>
-    <script type="text/javascript" src="app/javascripts/charts.js"></script>
-    <script type="text/javascript" src="app/javascripts/calendar.js"></script>
     <script type="text/javascript" src="app/javascripts/swim.js"></script>
+    <script type="text/javascript" src="app/javascripts/charts.js"></script>
+    <script type="text/javascript" src="app/javascripts/records.js"></script>
+    <script type="text/javascript" src="app/javascripts/records/create.js"></script>
+    <script type="text/javascript" src="app/javascripts/calendar.js"></script>
     <script type="text/javascript" src="app/javascripts/storage.js"></script>
   </head>
 
@@ -61,7 +64,7 @@
       </div><!-- /header -->
 
       <div data-theme="b" data-role="content">
-        <a href="#calorie" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">新增記錄</a>
+        <a href="#create" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">新增記錄</a>
         <a href="#calendar" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">我的月曆</a>
         <a href="#graph" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">累積消耗卡路里</a>
       </div><!-- /content -->
@@ -2889,24 +2892,24 @@
     </div><!-- /page calendar -->
 
     <!-- Start of calorie page: #calorie -->
-    <div data-theme="b" id="calorie" data-role="page" data-url="calorie">
+    <div data-theme="b" id="create" data-role="page" data-url="create">
 
       <div data-role="header">
-        <a data-icon="back" data-rel="back" data-direction="reverse" class="ui-btn-left">返回</a>
+        <a href="#calendar" data-icon="plus" class="create">建立</a>
         <h1>新增記錄</h1>
       </div><!-- /header -->
 
       <div data-theme="b" data-role="content">
         <div data-role="fieldcontain">
-          <div id="calorie_date"></div>
+          <div class="calendar"></div>
         </div>
         <div data-role="fieldcontain">
-          <label for="slider-mintues">游泳時間 (分鐘):</label>
-          <input type="range" id="slider-mintues" value="60" min="1" max="1440" data-highlight="true" data-mini="true" />
+          <label for="minutes">游泳時間 (分鐘):</label>
+          <input type="range" id="minutes" value="60" min="1" max="1440" data-highlight="true" data-mini="true" />
         </div>
         <div data-role="fieldcontain">
-          <label for="slider-meters">游泳距離 (米):</label>
-          <input type="range" id="slider-meters" value="50" min="0" max="72000" step="25" data-highlight="true" data-mini="true" />
+          <label for="meters">游泳距離 (米):</label>
+          <input type="range" id="meters" value="50" min="0" max="72000" step="25" data-highlight="true" data-mini="true" />
         </div>
         <fieldset data-role="controlgroup" data-mini="true">
           <legend>泳式:</legend>
