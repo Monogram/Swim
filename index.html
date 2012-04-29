@@ -25,6 +25,7 @@
     <script type="text/javascript" src="app/javascripts/swim.js"></script>
     <script type="text/javascript" src="app/javascripts/charts.js"></script>
     <script type="text/javascript" src="app/javascripts/records.js"></script>
+    <script type="text/javascript" src="app/javascripts/records/calendar.js"></script>
     <script type="text/javascript" src="app/javascripts/records/create.js"></script>
     <script type="text/javascript" src="app/javascripts/calendar.js"></script>
     <script type="text/javascript" src="app/javascripts/storage.js"></script>
@@ -2870,12 +2871,15 @@
     <div data-theme="b" id="calendar" data-role="page" data-url="calendar">
 
       <div data-role="header">
-        <a data-icon="back" data-rel="back" data-direction="reverse" class="ui-btn-left">返回</a>
+        <a href="#create" data-icon="plus">新增</a>
         <h1>我的月曆</h1>
       </div><!-- /header -->
 
       <div data-theme="b" data-role="content">
-        <div id="calendar_container">
+        <div class="calendar"></div>
+        <div data-role="fieldcontain">
+          <ul class="records" data-role="listview" data-theme="d">
+          </ul>
         </div>
       </div><!-- /content -->
       <div data-id="myfooter" data-role="footer" data-position="fixed">
