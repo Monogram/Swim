@@ -1,6 +1,10 @@
 ﻿(function(swim) {
   swim.records.calendar = {
     initiate: function() {
+      $("#calendar").live("pageinit", _.bind(function(event){
+        this.onSelect($("#calendar .calendar").val());
+      }, this));
+
       $("#calendar .calendar").datepicker({
         showOtherMonths: true,
         beforeShowDay: function(date) {
@@ -8,7 +12,6 @@
         },
         onSelect: _.bind(this.onSelect, this)
       });
-      this.onSelect($("#calendar .calendar").val());
 
       $("#calendar .records li").die("click").live("click", _.bind(function(event) {
         var records = swim.storage.get("records");
