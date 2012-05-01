@@ -2,12 +2,32 @@
   swim.records.charts = {
     initiate: function() {
       $("#charts").live("pageshow", _.bind(function(event){
-        var date = swim.records.current_date;
-        var month = date.getMonth();
-        var year = date.getFullYear();
-        $("#charts .title").text((month + 1) + "月份累積消耗卡路里");				
         this.render();
       }, this));
+
+			$("#charts .prev").die("click").live("click", _.bind(function() {
+				var date = swim.records.current_date;
+        var month = date.getMonth();
+        var year = date.getFullYear();
+				swim.records.current_date = new Date(
+					month === 0 ? year - 1 : year,
+					month === 0 ? 11 : month - 1,
+					1
+				);
+				this.render();
+			}, this));
+
+			$("#charts .next").die("click").live("click", _.bind(function() {
+				var date = swim.records.current_date;
+        var month = date.getMonth();
+        var year = date.getFullYear();
+				swim.records.current_date = new Date(
+					month === 11 ? year + 1 : year,
+					month === 11 ? 0 : month + 1,
+					1
+				);
+				this.render();
+			}, this));
     },
 		
     isLeapYear: function (year) {
@@ -33,18 +53,20 @@
     },
 
     getX: function(x) {
+			if (this.ylim[1] === this.ylim[0]) return 0;
       return this.paddingLeft + x / (this.ylim[1] - this.ylim[0]) * (this.canvas.width - this.paddingRight - this.paddingLeft);
     },
 		
     getY: function(y) {
+			if (this.xlim[1] === this.xlim[0]) return 0;
       return this.paddingTop + y / (this.xlim[1] - this.xlim[0]) * (this.canvas.height - this.paddingBottom - this.paddingTop);
     },
     renderFrame: function() {
       this.context.beginPath();
 
       // top
-      this.context.moveTo(this.getX(this.ylim[0]), this.getY(this.xlim[0]));
-      this.context.lineTo(this.getX(this.ylim[1]), this.getY(this.xlim[0]));
+      this.context.moveTo(this.paddingLeft, this.getY(this.xlim[0]));
+      this.context.lineTo(this.canvas.width - this.paddingRight, this.getY(this.xlim[0]));
 
       this.context.closePath();
       this.context.strokeStyle = this.frameColor;
@@ -101,6 +123,7 @@
       this.context.textBaseline = "middle";
 			this.context.fillStyle = this.textColor;
 			for (var i = 0; i < this.YTick.length; ++i) {
+			console.log(this.YTickLabel[i], this.paddingTop + this.space, this.canvas.width - this.getX(this.YTick[i]));
         this.context.fillText(this.YTickLabel[i], this.paddingTop + this.space, this.canvas.width - this.getX(this.YTick[i]));
       }
       this.context.restore();
@@ -170,6 +193,10 @@
 			this.space = options.space || 5;
 			this.radius = options.radius || 2;
 
+			var date = swim.records.current_date;
+			var month = date.getMonth();
+			var year = date.getFullYear();
+			$("#charts .title").text((month + 1) + "月份累積消耗卡路里");
 			$("#charts canvas").attr({
 				height: window.innerHeight - $("#charts .ui-header").outerHeight(true) - $("#charts .ui-footer").outerHeight(true),
 				width: window.innerWidth
@@ -181,6 +208,7 @@
       this.renderFrame();
       this.renderAxes();
       this.renderLine();
+      this.renderPoints();
       this.renderPoints();
       //this.renderTitle();
     }
