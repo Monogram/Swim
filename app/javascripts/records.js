@@ -1,7 +1,9 @@
 (function(swim) {
   swim.records = {
+    current_date: new Date,
     initiate: function() {
       this.calendar.initiate();
+      this.charts.initiate();
       this.create.initiate();
     },
     getRecords: function(date) {

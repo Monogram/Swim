@@ -26,6 +26,7 @@
     <script type="text/javascript" src="app/javascripts/charts.js"></script>
     <script type="text/javascript" src="app/javascripts/records.js"></script>
     <script type="text/javascript" src="app/javascripts/records/calendar.js"></script>
+    <script type="text/javascript" src="app/javascripts/records/charts.js"></script>
     <script type="text/javascript" src="app/javascripts/records/create.js"></script>
     <script type="text/javascript" src="app/javascripts/calendar.js"></script>
     <script type="text/javascript" src="app/javascripts/storage.js"></script>
@@ -67,7 +68,7 @@
       <div data-theme="b" data-role="content">
         <a href="#create" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">新增記錄</a>
         <a href="#calendar" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">我的月曆</a>
-        <a href="#graph" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">累積消耗卡路里</a>
+        <a href="#charts" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">累積消耗卡路里</a>
       </div><!-- /content -->
       <div data-id="myfooter" data-role="footer" data-position="fixed">
         <div data-role="navbar">
@@ -2942,18 +2943,15 @@
       </div>
     </div><!-- /page calorie -->
 
-    <!-- Start of graph page: #graph-->
-    <div data-theme="b" id="graph" data-role="page" data-url="graph">
+    <div data-theme="b" id="charts" data-role="page" data-url="charts">
 
       <div data-role="header">
-        <a data-icon="back" data-rel="back" data-direction="reverse" class="ui-btn-left">返回</a>
-        <h1>累積消耗卡路里</h1>
+        <a data-icon="arrow-l" data-iconpos="notext" class="prev"></a>
+        <h1 class="title"></h1>
+        <a data-icon="arrow-r" data-iconpos="notext" class="next"></a>
       </div><!-- /header -->
 
-      <div data-theme="b" data-role="content">
-        <div id="graph_container">
-        </div>
-      </div><!-- /content -->
+      <canvas id="myCanvas" width="200" height="100"></canvas>
       <div data-id="myfooter" data-role="footer" data-position="fixed">
         <div data-role="navbar">
           <ul>
@@ -2965,7 +2963,7 @@
           </ul>
         </div>
       </div>
-    </div><!-- /page graph -->
+    </div>
 
     <!-- Start of faq page: #register -->
     <div data-theme="b" id="register" data-role="page" data-url="register">

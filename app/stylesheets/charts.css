@@ -1,11 +1,3 @@
-#graph .ui-content {
-  padding: 0;
-}
-
-#cumulative_calories_per_date {
-  background-color: #FFFFFF;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+#charts canvas {
+  background-color: #000066;
 }
