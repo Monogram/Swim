@@ -1,7 +1,7 @@
 ﻿(function(swim) {
   swim.records.calendar = {
     initiate: function() {
-      $("#calendar").live("pageinit", _.bind(function(event){
+      $("#calendar").live("pageshow", _.bind(function(event){
         this.onSelect($("#calendar .calendar").val());
       }, this));
 
