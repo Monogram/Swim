@@ -131,7 +131,6 @@
       this.context.textBaseline = "middle";
 			this.context.fillStyle = this.textColor;
 			for (var i = 0; i < this.YTick.length; ++i) {
-			console.log(this.YTickLabel[i], this.paddingTop + this.space, this.canvas.width - this.getX(this.YTick[i]));
         this.context.fillText(this.YTickLabel[i], this.paddingTop + this.space, this.canvas.width - this.getX(this.YTick[i]));
       }
       this.context.restore();
