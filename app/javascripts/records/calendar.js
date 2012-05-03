@@ -2,7 +2,7 @@
   swim.records.calendar = {
     initiate: function() {
       $("#calendar").live("pageshow", _.bind(function(event){
-        this.onSelect($("#calendar .calendar").val());
+        this.onSelect(swim.records.current_date);
       }, this));
 
       $("#calendar .calendar").datepicker({
@@ -30,12 +30,10 @@
       }, this));
     },
     onSelect: function(dateText) {
+			swim.records.current_date = _.isString(dateText) ? swim.records.dateTextToDate(dateText) : dateText;
       $("#calendar .records").empty().append(
-        this.renderRecords(this.getRecordsByDateText(dateText))
+        this.renderRecords(swim.records.getRecords(swim.records.current_date))
       ).listview("refresh");
-    },
-    getRecordsByDateText: function(dateText) {
-      return swim.records.getRecords(swim.records.dateTextToDate(dateText));
     },
     renderRecords: function(records) {
       return _.map(records, _.bind(function(record) {

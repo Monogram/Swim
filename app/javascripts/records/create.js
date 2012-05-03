@@ -12,6 +12,9 @@
             "has-events" :
             ""
           ];
+        },
+        onSelect: function(dateText) {
+          swim.records.current_date = swim.records.dateTextToDate(dateText);
         }
       });
 
