@@ -53,13 +53,21 @@
     },
 
     getX: function(x) {
-			if (this.ylim[1] === this.ylim[0]) return 0;
-      return this.paddingLeft + x / (this.ylim[1] - this.ylim[0]) * (this.canvas.width - this.paddingRight - this.paddingLeft);
+      return this.paddingLeft +
+        (
+          this.ylim[1] > this.ylim[0] ?
+            x / (this.ylim[1] - this.ylim[0]) * (this.canvas.width - this.paddingRight - this.paddingLeft) :
+            0
+        );
     },
 		
     getY: function(y) {
-			if (this.xlim[1] === this.xlim[0]) return 0;
-      return this.paddingTop + y / (this.xlim[1] - this.xlim[0]) * (this.canvas.height - this.paddingBottom - this.paddingTop);
+      return this.paddingTop +
+        (
+          this.xlim[1] > this.xlim[0] ?
+            y / (this.xlim[1] - this.xlim[0]) * (this.canvas.height - this.paddingBottom - this.paddingTop) :
+            0
+        );
     },
     renderFrame: function() {
       this.context.beginPath();
