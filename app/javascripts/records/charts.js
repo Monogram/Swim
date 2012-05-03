@@ -175,7 +175,7 @@
 			var last_date = this.getDaysInMonth(year, month);
 			this.XTick = [1, 5, 10, 15, 20, 25].concat(last_date);
 			this.XTickLabel = ["1st", "5th", "10th", "15th", "20th", "25th"].concat(last_date + (last_date === 31 ? "st" : "th"));
-			this.YTick = _.range(this.ylim[0], this.ylim[1] + 1, 350);
+			this.YTick = _.range(this.ylim[0], this.ylim[1] + 1, parseInt(this.ylim[1] / 5));
 			this.YTickLabel = options.YTickLabel || this.YTick;
 			this.paddingBottom = options.paddingBottom || 20;
 			this.paddingLeft = options.paddingLeft || 25;
