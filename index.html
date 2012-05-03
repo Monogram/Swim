@@ -28,6 +28,7 @@
     <script type="text/javascript" src="app/javascripts/records/calendar.js"></script>
     <script type="text/javascript" src="app/javascripts/records/charts.js"></script>
     <script type="text/javascript" src="app/javascripts/records/create.js"></script>
+    <script type="text/javascript" src="app/javascripts/records/list.js"></script>
     <script type="text/javascript" src="app/javascripts/calendar.js"></script>
     <script type="text/javascript" src="app/javascripts/storage.js"></script>
   </head>
@@ -68,7 +69,7 @@
       <div data-theme="b" data-role="content">
         <a href="#create" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">新增記錄</a>
         <a href="#calendar" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">我的月曆</a>
-        <a href="#charts" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">累積消耗卡路里</a>
+        <a href="#list" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">累積消耗卡路里</a>
       </div><!-- /content -->
       <div data-id="myfooter" data-role="footer" data-position="fixed">
         <div data-role="navbar">
@@ -2943,12 +2944,34 @@
       </div>
     </div><!-- /page calorie -->
 
-    <div data-theme="b" id="charts" data-role="page" data-url="charts">
+    <div data-theme="b" id="list" data-role="page" data-url="list">
 
       <div data-role="header">
         <a data-icon="arrow-l" data-iconpos="notext" class="prev"></a>
         <h1 class="title"></h1>
         <a data-icon="arrow-r" data-iconpos="notext" class="next"></a>
+      </div><!-- /header -->
+        <ul class="records" data-role="listview" data-theme="d" data-divider-theme="d">
+        </ul>
+      <a href="#charts" data-role="button">圖表</a>
+      <div data-id="myfooter" data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
+            <li><a href="#records" class="footer-records" data-icon="custom" data-transition="none">我的記錄</a></li>
+            <li><a href="#information" class="footer-information" data-icon="custom" data-transition="none">有用資料</a></li>
+            <li><a href="#about" class="footer-about" data-icon="custom" data-transition="none">關於我們</a></li>
+            <li><a href="#register" class="footer-register" data-icon="custom" data-transition="none">我要報名</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div data-theme="b" id="charts" data-role="page" data-url="charts">
+
+      <div data-role="header">
+        <a href="#list" data-icon="back" class="back">返回</a>
+        <h1 class="title"></h1>
       </div><!-- /header -->
 
       <canvas id="myCanvas" width="200" height="100"></canvas>

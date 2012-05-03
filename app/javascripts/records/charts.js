@@ -4,30 +4,6 @@
       $("#charts").live("pageshow", _.bind(function(event){
         this.render();
       }, this));
-
-			$("#charts .prev").die("click").live("click", _.bind(function() {
-				var date = swim.records.current_date;
-        var month = date.getMonth();
-        var year = date.getFullYear();
-				swim.records.current_date = new Date(
-					month === 0 ? year - 1 : year,
-					month === 0 ? 11 : month - 1,
-					1
-				);
-				this.render();
-			}, this));
-
-			$("#charts .next").die("click").live("click", _.bind(function() {
-				var date = swim.records.current_date;
-        var month = date.getMonth();
-        var year = date.getFullYear();
-				swim.records.current_date = new Date(
-					month === 11 ? year + 1 : year,
-					month === 11 ? 0 : month + 1,
-					1
-				);
-				this.render();
-			}, this));
     },
 		
     isLeapYear: function (year) {
@@ -203,7 +179,7 @@
 			var date = swim.records.current_date;
 			var month = date.getMonth();
 			var year = date.getFullYear();
-			$("#charts .title").text((month + 1) + "月份累積消耗卡路里");
+      $("#charts .title").text(year + "年" +(month + 1) + "月");
 			$("#charts canvas").attr({
 				height: window.innerHeight - $("#charts .ui-header").outerHeight(true) - $("#charts .ui-footer").outerHeight(true),
 				width: window.innerWidth
