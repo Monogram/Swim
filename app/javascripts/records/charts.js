@@ -24,7 +24,7 @@
       return this.paddingLeft +
         (
           this.ylim[1] > this.ylim[0] ?
-            x / (this.ylim[1] - this.ylim[0]) * (this.canvas.width - this.paddingRight - this.paddingLeft) :
+            (x - this.ylim[0]) / (this.ylim[1] - this.ylim[0]) * (this.canvas.width - this.paddingRight - this.paddingLeft) :
             0
         );
     },
@@ -33,7 +33,7 @@
       return this.paddingTop +
         (
           this.xlim[1] > this.xlim[0] ?
-            y / (this.xlim[1] - this.xlim[0]) * (this.canvas.height - this.paddingBottom - this.paddingTop) :
+            (y - this.xlim[0]) / (this.xlim[1] - this.xlim[0]) * (this.canvas.height - this.paddingBottom - this.paddingTop) :
             0
         );
     },
@@ -62,30 +62,26 @@
       this.context.stroke();
     },
 
-    renderXAxis: function() {/*
-      this.context.textAlign = "center";
-      this.context.textBaseline = "top";
-      for (var i = 0; i < this.XTick.length; ++i) {
-        this.context.fillText(this.XTickLabel[i], this.getX(this.XTick[i]), this.canvas.height - this.paddingBottom + this.space);
-      }
-      this.context.textBaseline = "bottom";
-			this.context.fillStyle = this.textColor;
-      this.context.fillText(this.xLabel, this.paddingLeft + (this.canvas.width - this.paddingRight - this.paddingLeft) / 2, this.canvas.height - this.space);*/
-			
-			
+    renderXAxis: function() {
       this.context.save();
       this.context.translate(this.canvas.width, 0);
       this.context.rotate(Math.PI/2);
-      this.context.textAlign = "end";
-      this.context.textBaseline = "bottom";
+      this.context.textAlign = "center";
+      this.context.textBaseline = "top";
 			this.context.fillStyle = this.textColor;
 			for (var i = 0; i < this.XTick.length; ++i) {
-        this.context.fillText(this.XTickLabel[i], this.getY(this.XTick[i]), this.canvas.width - this.space);
+        this.context.fillText(this.XTickLabel[i], this.getY(this.XTick[i]), this.canvas.width - this.paddingLeft + this.space);
       }
+      this.context.textBaseline = "bottom";
+      this.context.fillText(this.xLabel, this.paddingTop + (this.canvas.height - this.paddingTop - this.paddingBottom) / 2, this.canvas.width - this.space);
       this.context.restore();
     },
 
     renderYAxis: function() {
+      this.context.textAlign = "center";
+      this.context.textBaseline = "top";
+			this.context.fillStyle = this.textColor;
+      this.context.fillText(this.yLabel, this.paddingLeft + (this.canvas.width - this.paddingLeft - this.paddingRight) / 2, this.space);
       this.context.save();
       this.context.translate(this.canvas.width, 0);
       this.context.rotate(Math.PI/2);
@@ -93,7 +89,7 @@
       this.context.textBaseline = "middle";
 			this.context.fillStyle = this.textColor;
 			for (var i = 0; i < this.YTick.length; ++i) {
-        this.context.fillText(this.YTickLabel[i], this.paddingTop + this.space, this.canvas.width - this.getX(this.YTick[i]));
+        this.context.fillText(this.YTickLabel[i], this.paddingTop - this.space, this.canvas.width - this.getX(this.YTick[i]));
       }
       this.context.restore();
     },
@@ -125,13 +121,6 @@
       }
     },
 
-    renderTitle: function() {
-      this.context.textAlign = "center";
-      this.context.textBaseline = "top";
-      this.context.fillStyle = this.titleColor;
-      this.context.fillText(this.title, this.paddingLeft + (this.canvas.width - this.paddingRight - this.paddingLeft) / 2, this.space);
-    },
-
     render: function() {
 			var date = swim.records.current_date;
       var month = date.getMonth();
@@ -146,18 +135,18 @@
 			this.XTickLabel = ["1st", "5th", "10th", "15th", "20th", "25th"].concat(last_date + (last_date === 31 ? "st" : "th"));
 			this.YTick = _.range(this.ylim[0], this.ylim[1] + 1, parseInt(this.ylim[1] / 5));
 			this.YTickLabel = this.YTick;
-			this.paddingBottom = 20;
-			this.paddingLeft = 25;
-			this.paddingRight = 20;
-			this.paddingTop = 30;
+			this.paddingBottom = 15;
+			this.paddingLeft = 35;
+			this.paddingRight = 15;
+			this.paddingTop = 50;
 			this.frameColor = "#CCFFFF";
 			this.gridColor = "#CCFFFF";
 			this.pointColor = "#D5DDF3";
 			this.lineColor = "#FFFFFF";
 			this.titleColor = "#000000";
 			this.textColor = "#FFFFFF";
-			this.xLabel = "";
-			this.yLabel = "";
+			this.xLabel = "日期";
+			this.yLabel = "卡路里";
 			this.title = "";
 			this.space = 5;
 			this.radius = 2;
@@ -175,7 +164,6 @@
       this.renderAxes();
       this.renderLine();
       this.renderPoints();
-      //this.renderTitle();
     }
   };
 })(swim);
