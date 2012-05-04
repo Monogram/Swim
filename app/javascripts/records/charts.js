@@ -153,7 +153,7 @@
 
       $("#charts .title").text(year + "年" +(month + 1) + "月");
 			$("#charts canvas").attr({
-				height: window.innerHeight - $("#charts .ui-header").outerHeight(true) - $("#charts .ui-footer").outerHeight(true),
+				height: Math.max(1000, window.innerHeight - $("#charts .ui-header").outerHeight(true) - $("#charts .ui-footer").outerHeight(true)),
 				width: window.innerWidth
       });
       this.canvas = $("#charts canvas").get(0);
