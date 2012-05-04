@@ -5,20 +5,12 @@
         this.render();
       }, this));
     },
-		
-    isLeapYear: function (year) {
-      return ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0);
-    },
 
-    getDaysInMonth: function (year, month) {
-      return [31, (this.isLeapYear(year) ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
-    },
-		
     getCumulativeCalories: function(year, month) {
       var cumulative_calories = 0;
-      return _.map(_.range(1, this.getDaysInMonth(year, month) + 1), function(date) {
+      return _.map(_.range(1, swim.records.getDaysInMonth(year, month) + 1), function(date) {
         cumulative_calories += _.reduce(swim.records.getRecords(new Date(year, month, date)), function(calories, record) {
-          return calories + record.minutes / 60 * 350;
+          return calories + swim.records.calculateCalories(record);
         }, 0);
         return cumulative_calories;
       });			
@@ -47,11 +39,8 @@
     },
     renderFrame: function() {
       this.context.beginPath();
-
-      // top
       this.context.moveTo(this.paddingLeft, this.getY(this.xlim[0]));
       this.context.lineTo(this.canvas.width - this.paddingRight, this.getY(this.xlim[0]));
-
       this.context.closePath();
       this.context.strokeStyle = this.frameColor;
       this.context.lineCap= "square";
@@ -65,15 +54,12 @@
       for (var i = 0; i < this.YTick.length; ++i) {
         this.context.moveTo(this.getX(this.YTick[i]), this.getY(this.xlim[0]));
         this.context.lineTo(this.getX(this.YTick[i]), this.getY(this.xlim[1]));
-				
       }
 			this.context.closePath();
 			this.context.strokeStyle = this.gridColor;
 			this.context.lineCap= "square";
 			this.context.lineWidth= "1";
       this.context.stroke();
-
-      
     },
 
     renderXAxis: function() {/*
@@ -150,35 +136,32 @@
 			var date = swim.records.current_date;
       var month = date.getMonth();
       var year = date.getFullYear();
-			var options = {};
-			this.x = _.range(1, Calendar.date.getDaysInMonth(year, month) + 1);
+
+			this.x = _.range(1, swim.records.getDaysInMonth(year, month) + 1);
 			this.y = this.getCumulativeCalories(year, month);
-			this.xlim = [Math.min.apply(null, this.x), Math.max.apply(null, this.x)];
-			this.ylim = [Math.min.apply(null, this.y), Math.max.apply(null, this.y)];
-			var last_date = this.getDaysInMonth(year, month);
+			this.xlim = [_.min(this.x), _.max(this.x)];
+			this.ylim = [_.min(this.y), _.max(this.y)];
+			var last_date = swim.records.getDaysInMonth(year, month);
 			this.XTick = [1, 5, 10, 15, 20, 25].concat(last_date);
 			this.XTickLabel = ["1st", "5th", "10th", "15th", "20th", "25th"].concat(last_date + (last_date === 31 ? "st" : "th"));
 			this.YTick = _.range(this.ylim[0], this.ylim[1] + 1, parseInt(this.ylim[1] / 5));
-			this.YTickLabel = options.YTickLabel || this.YTick;
-			this.paddingBottom = options.paddingBottom || 20;
-			this.paddingLeft = options.paddingLeft || 25;
-			this.paddingRight = options.paddingRight || 20;
-			this.paddingTop = options.paddingTop || 30;
-			this.frameColor = options.frameColor || "#CCFFFF";
-			this.gridColor = options.paddingTop || "#CCFFFF";
-			this.pointColor = options.pointColor || "#D5DDF3";
-			this.lineColor = options.lineColor || "#FFFFFF";
-			this.titleColor = options.titleColor || "#000000";
-			this.textColor = options.textColor || "#FFFFFF";
-			this.xLabel = options.xLabel || "";
-			this.yLabel = options.yLabel || "";
-			this.title = options.title || "";
-			this.space = options.space || 5;
-			this.radius = options.radius || 2;
+			this.YTickLabel = this.YTick;
+			this.paddingBottom = 20;
+			this.paddingLeft = 25;
+			this.paddingRight = 20;
+			this.paddingTop = 30;
+			this.frameColor = "#CCFFFF";
+			this.gridColor = "#CCFFFF";
+			this.pointColor = "#D5DDF3";
+			this.lineColor = "#FFFFFF";
+			this.titleColor = "#000000";
+			this.textColor = "#FFFFFF";
+			this.xLabel = "";
+			this.yLabel = "";
+			this.title = "";
+			this.space = 5;
+			this.radius = 2;
 
-			var date = swim.records.current_date;
-			var month = date.getMonth();
-			var year = date.getFullYear();
       $("#charts .title").text(year + "年" +(month + 1) + "月");
 			$("#charts canvas").attr({
 				height: window.innerHeight - $("#charts .ui-header").outerHeight(true) - $("#charts .ui-footer").outerHeight(true),
@@ -191,7 +174,6 @@
       this.renderFrame();
       this.renderAxes();
       this.renderLine();
-      this.renderPoints();
       this.renderPoints();
       //this.renderTitle();
     }
