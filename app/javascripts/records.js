@@ -19,7 +19,7 @@
     },
     dateTextToDate: function(dateText) {
       var d = dateText.split(/\//);
-      return new Date(d[2], parseInt(d[0], 10) - 1, d[1])
+      return new Date(d[2], parseInt(d[0], 10) - 1, d[1]);
     },
     calculateCalories: function(record) {
       return record.minutes / 60 * 350;

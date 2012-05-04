@@ -43,21 +43,18 @@
       this.context.lineTo(this.canvas.width - this.paddingRight, this.getY(this.xlim[0]));
       this.context.closePath();
       this.context.strokeStyle = this.frameColor;
-      this.context.lineCap= "square";
       this.context.lineWidth= "1";
       this.context.stroke();
     },
 
     renderGrid: function() {
       this.context.beginPath();
-
       for (var i = 0; i < this.YTick.length; ++i) {
         this.context.moveTo(this.getX(this.YTick[i]), this.getY(this.xlim[0]));
         this.context.lineTo(this.getX(this.YTick[i]), this.getY(this.xlim[1]));
       }
 			this.context.closePath();
 			this.context.strokeStyle = this.gridColor;
-			this.context.lineCap= "square";
 			this.context.lineWidth= "1";
       this.context.stroke();
     },
@@ -78,16 +75,15 @@
     },
 
     renderYAxis: function() {
+      this.context.save();
       this.context.textAlign = "center";
       this.context.textBaseline = "top";
 			this.context.fillStyle = this.textColor;
       this.context.fillText(this.yLabel, this.paddingLeft + (this.canvas.width - this.paddingLeft - this.paddingRight) / 2, this.space);
-      this.context.save();
       this.context.translate(this.canvas.width, 0);
       this.context.rotate(Math.PI/2);
       this.context.textAlign = "end";
       this.context.textBaseline = "middle";
-			this.context.fillStyle = this.textColor;
 			for (var i = 0; i < this.YTick.length; ++i) {
         this.context.fillText(this.YTickLabel[i], this.paddingTop - this.space, this.canvas.width - this.getX(this.YTick[i]));
       }
