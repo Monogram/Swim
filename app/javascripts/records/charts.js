@@ -130,9 +130,11 @@
 			this.y = this.getCumulativeCalories(year, month);
 			this.xlim = [_.min(this.x), _.max(this.x)];
 			this.ylim = [_.min(this.y), _.max(this.y)];
-			var last_date = swim.records.getDaysInMonth(year, month);
-			this.XTick = [1, 5, 10, 15, 20, 25].concat(last_date);
-			this.XTickLabel = ["1st", "5th", "10th", "15th", "20th", "25th"].concat(last_date + (last_date === 31 ? "st" : "th"));
+			this.XTick = this.x;
+			this.XTickLabel = _.map(this.XTick, function(date) {
+			  var suffix = ["th", "st", "nd", "rd"];
+			  return date + (suffix[(date - 20) % 10] || suffix[date] || suffix[0]);
+			});
 			this.YTick = _.range(this.ylim[0], this.ylim[1] + 1, parseInt(this.ylim[1] / 5));
 			this.YTickLabel = this.YTick;
 			this.paddingBottom = 15;
