@@ -14,6 +14,12 @@
       });
 
       $("#calendar .records li").die("click").live("click", _.bind(function(event) {
+        if ($(event.target).closest(".delete").length === 0) {
+          $(event.target).closest("li").find(".delete").toggle();
+        }
+      }, this));
+
+      $("#calendar .records li .delete").die("click").live("click", _.bind(function(event) {
         var records = swim.storage.get("records");
         var date = $("#calendar .calendar").val().split(/\//);
         var key = [parseInt(date[1], 10), parseInt(date[0], 10) - 1, date[2]].join("-");
@@ -48,7 +54,7 @@
         "butterfly-stroke": "蝶泳",
         "other": "其他"
       }[record.stroke];
-      return $("<li data-icon=\"minus\" stroke=\"" + record.stroke + "\"><a>" + record.meters + "米" + stroke + " (" + record.minutes + "分鐘)</a></li>");
+      return $("<li stroke=\"" + record.stroke + "\"><span>" + record.meters + "米" + stroke + " (" + record.minutes + "分鐘)</span><span class=\"delete\" style=\"display: none; float: right;\">刪除</span></li>");
     }
   };
 })(swim);
