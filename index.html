@@ -9,6 +9,7 @@
     <link href="app/stylesheets/footer.css" rel="stylesheet">
     <link href="app/stylesheets/jquery.mobile.css" rel="stylesheet">
 		<link href="app/stylesheets/poster.css" rel="stylesheet">
+    <link href="app/stylesheets/schedule.css" rel="stylesheet">
     <link href="vendor/jquery.ui.datepicker.mobile.css" rel="stylesheet">
     <script type="text/javascript" src="vendor/jquery-1.7.2.min.js"></script>
     <script>
@@ -28,6 +29,7 @@
     <script type="text/javascript" src="app/javascripts/records/charts.js"></script>
     <script type="text/javascript" src="app/javascripts/records/create.js"></script>
     <script type="text/javascript" src="app/javascripts/records/list.js"></script>
+    <script type="text/javascript" src="app/javascripts/schedule.js"></script>
     <script type="text/javascript" src="app/javascripts/storage.js"></script>
   </head>
 
@@ -2876,13 +2878,383 @@
     <div data-theme="b" id="schedule" data-role="page" data-url="schedule">
 
       <div data-role="header">
-        <a data-icon="back" data-rel="back" data-direction="reverse" class="ui-btn-left">返回</a>
         <h1>學習進程</h1>
       </div><!-- /header -->
 
       <div data-theme="b" data-role="content">
-        <p>SCHEdule schedule</p>
-        <p>blah blah blah</p>
+        <ul data-role="listview" data-theme="d" data-divider-theme="d">
+          <li class="schedule schedule-1" data-role="list-divider">BB班/基礎班(3課)</li>
+          <li>
+            <div class="ui-grid-a">
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-1-1" type="checkbox" />
+                  <label for="schedule-1-1">
+                    克服怕水
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-1-2" type="checkbox" />
+                  <label for="schedule-1-2">
+                    拉筋熱身
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-1-3" type="checkbox" />
+                  <label for="schedule-1-3">
+                    浮身站立
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-1-4" type="checkbox" />
+                  <label for="schedule-1-4">
+                    口吸鼻呼
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-1-5" type="checkbox" />
+                  <label for="schedule-1-5">
+                    潛水閉氣
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-1-6" type="checkbox" />
+                  <label for="schedule-1-6">
+                    浮板踢腳
+                  </label>
+                </fieldset>
+              </div>
+            </div>
+          </li>
+          <li class="schedule schedule-2" data-role="list-divider">捷泳(10課)</li>
+          <li>
+            <div class="ui-grid-a">
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-2-1" type="checkbox" />
+                  <label for="schedule-2-1">
+                    捷泳踢腳
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-2-2" type="checkbox" />
+                  <label for="schedule-2-2">
+                    捷泳划手
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-2-3" type="checkbox" />
+                  <label for="schedule-2-3">
+                    轉頭呼吸
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-2-4" type="checkbox" />
+                  <label for="schedule-2-4">
+                    全式配合
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-2-5" type="checkbox" />
+                  <label for="schedule-2-5">
+                    捷泳全式
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-2-6" type="checkbox" />
+                  <label for="schedule-2-6">
+                    背平浮身
+                  </label>
+                </fieldset>
+              </div>
+            </div>
+          </li>
+          <li class="schedule schedule-3" data-role="list-divider">背泳(4課)</li>
+          <li>
+            <div class="ui-grid-a">
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-3-1" type="checkbox" />
+                  <label for="schedule-3-1">
+                    浮板背浮
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-3-2" type="checkbox" />
+                  <label for="schedule-3-2">
+                    背浮踢腳
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-3-3" type="checkbox" />
+                  <label for="schedule-3-3">
+                    背浮出池
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-3-4" type="checkbox" />
+                  <label for="schedule-3-4">
+                    背泳划手
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-3-5" type="checkbox" />
+                  <label for="schedule-3-5">
+                    背泳配合
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-3-6" type="checkbox" />
+                  <label for="schedule-3-6">
+                    背泳全式
+                  </label>
+                </fieldset>
+              </div>
+            </div>
+          </li>
+          <li class="schedule schedule-4" data-role="list-divider">蛙式(8課)</li>
+          <li>
+            <div class="ui-grid-a">
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-4-1" type="checkbox" />
+                  <label for="schedule-4-1">
+                    蛙腳練習
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-4-2" type="checkbox" />
+                  <label for="schedule-4-2">
+                    浮板蛙腳
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-4-3" type="checkbox" />
+                  <label for="schedule-4-3">
+                    蛙手練習
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-4-4" type="checkbox" />
+                  <label for="schedule-4-4">
+                    蛙式配合
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-4-5" type="checkbox" />
+                  <label for="schedule-4-5">
+                    蛙式全式
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-4-6" type="checkbox" />
+                  <label for="schedule-4-6">
+                    蛙式踩水
+                  </label>
+                </fieldset>
+              </div>
+            </div>
+          </li>
+          <li class="schedule schedule-5" data-role="list-divider">蝶式(5課)</li>
+          <li>
+            <div class="ui-grid-a">
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-5-1" type="checkbox" />
+                  <label for="schedule-5-1">
+                    海豚踢腳
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-5-2" type="checkbox" />
+                  <label for="schedule-5-2">
+                    豚式蛙手
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-5-3" type="checkbox" />
+                  <label for="schedule-5-3">
+                    蝶式划水
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-5-4" type="checkbox" />
+                  <label for="schedule-5-4">
+                    蝶式配合
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-5-5" type="checkbox" />
+                  <label for="schedule-5-5">
+                    蝶式全式
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-5-6" type="checkbox" />
+                  <label for="schedule-5-6">
+                    四式轉換
+                  </label>
+                </fieldset>
+              </div>
+            </div>
+          </li>
+          <li class="schedule schedule-6" data-role="list-divider">四式進階(10課)</li>
+          <li>
+            <div class="ui-grid-a">
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-6-1" type="checkbox" />
+                  <label for="schedule-6-1">
+                    四式改良
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-6-2" type="checkbox" />
+                  <label for="schedule-6-2">
+                    轉池技術
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-6-3" type="checkbox" />
+                  <label for="schedule-6-3">
+                    跳水技術
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-6-4" type="checkbox" />
+                  <label for="schedule-6-4">
+                    速度提升
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-6-5" type="checkbox" />
+                  <label for="schedule-6-5">
+                    肌力訓練
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-6-6" type="checkbox" />
+                  <label for="schedule-6-6">
+                    體能培訓
+                  </label>
+                </fieldset>
+              </div>
+            </div>
+          </li>
+          <li class="schedule schedule-7" data-role="list-divider">泳隊(定期訓練)</li>
+          <li>
+            <div class="ui-grid-a">
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-7-1" type="checkbox" />
+                  <label for="schedule-7-1">
+                    高階四式
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-7-2" type="checkbox" />
+                  <label for="schedule-7-2">
+                    轉池融合
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-7-3" type="checkbox" />
+                  <label for="schedule-7-3">
+                    跳水滑水培訓
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-7-4" type="checkbox" />
+                  <label for="schedule-7-4">
+                    競賽訓練
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-a">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-7-5" type="checkbox" />
+                  <label for="schedule-7-5">
+                    爆發力提升
+                  </label>
+                </fieldset>
+              </div>
+              <div class="ui-block-b">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                  <input id="schedule-7-6" type="checkbox" />
+                  <label for="schedule-7-6">
+                    耐力提升
+                  </label>
+                </fieldset>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div><!-- /content -->
       <div data-id="myfooter" data-role="footer" data-position="fixed">
         <div data-role="navbar">
