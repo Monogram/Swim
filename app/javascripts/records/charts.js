@@ -59,6 +59,20 @@
       this.context.stroke();
     },
 
+    renderBackground: function() {
+      _.each(this.backgroundColors, _.bind(function(color) {
+        if (color[0] < this.ylim[1]) {
+          this.context.fillStyle = color[1];
+          this.context.fillRect(
+            this.getX(color[0]),
+            this.getY(this.xlim[0]),
+            this.getX(this.ylim[1]) - this.getX(color[0]),
+            this.getY(this.xlim[1]) - this.getY(this.xlim[0])
+          );
+        }
+      }, this));
+    },
+
     renderXAxis: function() {
       this.context.save();
       this.context.translate(this.canvas.width, 0);
@@ -137,6 +151,13 @@
 			this.paddingLeft = 35;
 			this.paddingRight = 15;
 			this.paddingTop = 50;
+			this.backgroundColors = [
+			  [0, "#666666"],
+			  [500, "#AE57A4"],
+			  [2000, "#EAC100"],
+			  [2300, "#FF8000"],
+			  [2500, "#FF0000"]
+			];
 			this.frameColor = "#CCFFFF";
 			this.gridColor = "#CCFFFF";
 			this.pointColor = "#D5DDF3";
@@ -157,6 +178,7 @@
       this.canvas = $("#charts canvas").get(0);
       this.context = this.canvas.getContext("2d");
       this.clear();
+      this.renderBackground();
       this.renderGrid();
       this.renderFrame();
       this.renderAxes();
