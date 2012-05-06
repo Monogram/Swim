@@ -1,9 +1,7 @@
 ﻿(function(swim) {
   swim.records.charts = {
     initiate: function() {
-      $("#charts").live("pageshow", _.bind(function(event){
-        this.render();
-      }, this));
+      $("#charts").live("pageshow", _.bind(this.render, this));
     },
 
     getCumulativeCalories: function(year, month) {

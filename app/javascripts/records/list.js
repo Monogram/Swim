@@ -1,33 +1,33 @@
 ﻿(function(swim) {
   swim.records.list = {
     initiate: function() {
-      $("#list").live("pageshow", _.bind(function(event){
-        this.render();
+      $("#list").live( "pageinit", _.bind(function(){
+        $("#list .prev").die("click").live("click", _.bind(function() {
+          var date = swim.records.current_date;
+          var month = date.getMonth();
+          var year = date.getFullYear();
+          swim.records.current_date = new Date(
+            month === 0 ? year - 1 : year,
+            month === 0 ? 11 : month - 1,
+            1
+          );
+          this.render();
+        }, this));
+
+        $("#list .next").die("click").live("click", _.bind(function() {
+          var date = swim.records.current_date;
+          var month = date.getMonth();
+          var year = date.getFullYear();
+          swim.records.current_date = new Date(
+            month === 11 ? year + 1 : year,
+            month === 11 ? 0 : month + 1,
+            1
+          );
+          this.render();
+        }, this));
       }, this));
 
-			$("#list .prev").die("click").live("click", _.bind(function() {
-				var date = swim.records.current_date;
-        var month = date.getMonth();
-        var year = date.getFullYear();
-				swim.records.current_date = new Date(
-					month === 0 ? year - 1 : year,
-					month === 0 ? 11 : month - 1,
-					1
-				);
-				this.render();
-			}, this));
-
-			$("#list .next").die("click").live("click", _.bind(function() {
-				var date = swim.records.current_date;
-        var month = date.getMonth();
-        var year = date.getFullYear();
-				swim.records.current_date = new Date(
-					month === 11 ? year + 1 : year,
-					month === 11 ? 0 : month + 1,
-					1
-				);
-				this.render();
-			}, this));
+      $("#list").live("pageshow", _.bind(this.render, this));
     },
     render: function() {
       var date = swim.records.current_date;
