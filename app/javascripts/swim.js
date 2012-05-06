@@ -1,6 +1,6 @@
 (function() {
   this.swim = {
-    onLoad: function() {
+    initiate: function() {
       this.schedule.initiate();
       this.records.initiate();
     }
