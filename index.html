@@ -33,6 +33,9 @@
     <script type="text/javascript" src="app/javascripts/schedule.js"></script>
     <script type="text/javascript" src="app/javascripts/storage.js"></script>
     <script>
+      touchMove = function(event){
+        event.preventDefault();
+      }
       swim.initiate();
     </script>
   </head>
@@ -43,12 +46,12 @@
     <!-- Start of first page: #poster -->
     <div data-theme="b" id="poster" data-role="page" data-url="poster">
 
-      <div class="ui-bar-b" data-role="header" data-position="inline">
+      <div class="ui-bar-b" data-role="header" data-position="inline" ontouchmove="touchMove(event);">
         <h1>卓毅游泳會</h1>
       </div>
 			<div class="poster">
 			</div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -63,7 +66,7 @@
 
     <div data-theme="b" id="about" data-role="page" data-url="about">
 
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <h1>關於我們</h1>
       </div><!-- /header -->
 
@@ -77,7 +80,7 @@
         <p>佐敦吳松街 165-167 號置域商業大廈 8 樓 B,C 室</p>
 				<div class="location"></div>
       </div><!-- /content -->
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -92,7 +95,7 @@
 
     <div data-theme="b" id="records" data-role="page" data-url="records">
 
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <h1>我的記錄</h1>
       </div><!-- /header -->
 
@@ -101,7 +104,7 @@
         <a href="#calendar" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">我的月曆</a>
         <a href="#list" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">累積消耗卡路里</a>
       </div><!-- /content -->
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -116,7 +119,7 @@
 
     <div data-theme="b" id="information" data-role="page" data-url="information">
 
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <h1>有用資料</h1>
       </div><!-- /header -->
 
@@ -125,7 +128,7 @@
         <a href="#swimming-tips" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">游泳謬誤逐點捉</a>
         <a href="#faq" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">常見問題</a>
       </div><!-- /content -->
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -141,7 +144,7 @@
     <!-- Start of Swimming tips page: #swimming-tips -->
     <div data-theme="b" id="swimming-tips" data-role="page" data-url="swimming-tips">
 
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#information" data-transition="none">返回</a>
         <h1>游泳謬誤逐點捉</h1>
       </div><!-- /header -->
@@ -169,7 +172,7 @@
           身體著想，要改改這個觀念了。
         </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -186,7 +189,7 @@
     <!-- Start of faq page: #faq -->
     <div data-theme="b" id="faq" data-role="page" data-url="faq">
 
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#information" data-transition="none">返回</a>
         <h1>常見問題</h1>
       </div><!-- /header -->
@@ -210,7 +213,7 @@
         水。萬試萬靈。
         </p>
       </div><!-- /content -->
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -226,7 +229,7 @@
      <!-- Start of swimming pool info page: #swimming pool -->
     <div data-theme="b" id="swimming-pools" data-role="page" data-url="swimming-pools">
 
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#information" data-transition="none">返回</a>
         <h1>公眾游泳池資料</h1>
       </div><!-- /header -->
@@ -240,7 +243,7 @@
         	</ul>
         </div>
       </div><!-- /content -->
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -255,7 +258,7 @@
     
     <!-- Start of area hk list: # areahk -->
     <div id="areahk" data-role="page" data-url="areahk">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#swimming-pools" data-transition="none">返回</a>
         <h1>香港島</h1>
       </div><!-- /header -->
@@ -275,7 +278,7 @@
             <li><a href="#islandeast" data-transition="none">港島東游泳池</a></li>
             <li><a href="#siusaiwan" data-transition="none">小西灣游泳池</a></li>
         </ul> 
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -290,7 +293,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #paoyuekong -->
     <div id="paoyuekong" data-role="page" data-url="paoyuekong">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>包玉剛游泳池</h1>
       </div><!-- /header -->
@@ -333,7 +336,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -348,7 +351,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #kennedytown -->
     <div id="kennedytown" data-role="page" data-url="kennedytown">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>堅尼地城游泳池</h1>
       </div><!-- /header -->
@@ -393,7 +396,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -408,7 +411,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #sunyatsen -->
     <div id="sunyatsen" data-role="page" data-url="sunyatsen">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>中山紀念公園游泳池</h1>
       </div><!-- /header -->
@@ -457,7 +460,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -472,7 +475,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #morrisonhill -->
     <div id="morrisonhill" data-role="page" data-url="morrisonhill">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>摩理臣山游泳池</h1>
       </div><!-- /header -->
@@ -521,7 +524,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -536,7 +539,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #wanchai -->
     <div id="wanchai" data-role="page" data-url="wanchai">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>灣仔游泳池</h1>
       </div><!-- /header -->
@@ -577,7 +580,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -592,7 +595,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #chaiwan -->
     <div id="chaiwan" data-role="page" data-url="chaiwan">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>柴灣游泳池</h1>
       </div><!-- /header -->
@@ -635,7 +638,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -650,7 +653,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #victoriapark -->
     <div id="victoriapark" data-role="page" data-url="victoriapark">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>維多利亞公園游泳池</h1>
       </div><!-- /header -->
@@ -694,7 +697,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -709,7 +712,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #islandeast -->
     <div id="islandeast" data-role="page" data-url="islandeast">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>港島東游泳池</h1>
       </div><!-- /header -->
@@ -758,7 +761,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -773,7 +776,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #siusaiwan -->
     <div id="siusaiwan" data-role="page" data-url="siusaiwan">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>小西灣游泳池</h1>
       </div><!-- /header -->
@@ -822,7 +825,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -837,7 +840,7 @@
     
     <!-- Start of area kln list: # areakln -->
     <div id="areakln" data-role="page" data-url="areakln">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#swimming-pools" data-transition="none">返回</a>
         <h1>九龍區</h1>
       </div><!-- /header -->
@@ -863,7 +866,7 @@
             <li><a href="#kwuntong" data-transition="none">觀塘游泳池</a></li>
         </ul>
       </div> <!-- content -->  
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -878,7 +881,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #laichikokpark -->
     <div id="laichikokpark" data-role="page" data-url="laichikokpark">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>荔枝角公園游泳池</h1>
       </div><!-- /header -->
@@ -929,7 +932,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -944,7 +947,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #leichenguk -->
     <div id="leichenguk" data-role="page" data-url="leichenguk">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>李鄭屋游泳池</h1>
       </div><!-- /header -->
@@ -987,7 +990,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1002,7 +1005,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #shamshuipopark -->
     <div id="shamshuipopark" data-role="page" data-url="shamshuipopark">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>深水埗公園游泳池</h1>
       </div><!-- /header -->
@@ -1054,7 +1057,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1069,7 +1072,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #kowloonpark -->
     <div id="kowloonpark" data-role="page" data-url="kowloonpark">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>九龍公園游泳池</h1>
       </div><!-- /header -->
@@ -1119,7 +1122,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1134,7 +1137,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #taikoktsui -->
     <div id="taikoktsui" data-role="page" data-url="taikoktsui">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>大角咀游泳池</h1>
       </div><!-- /header -->
@@ -1182,7 +1185,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1197,7 +1200,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #taiwanshan -->
     <div id="taiwanshan" data-role="page" data-url="taiwanshan">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>大環山游泳池</h1>
       </div><!-- /header -->
@@ -1240,7 +1243,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1255,7 +1258,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #homantin -->
     <div id="homantin" data-role="page" data-url="homantin">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>何文田游泳池</h1>
       </div><!-- /header -->
@@ -1305,7 +1308,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1320,7 +1323,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #kowloontsai -->
     <div id="kowloontsai" data-role="page" data-url="kowloontsai">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>九龍仔游泳池</h1>
       </div><!-- /header -->
@@ -1363,7 +1366,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1378,7 +1381,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #morsepark -->
     <div id="morsepark" data-role="page" data-url="morsepark">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>摩士公園游泳池</h1>
       </div><!-- /header -->
@@ -1422,7 +1425,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1437,7 +1440,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #hammerhillroad -->
     <div id="hammerhillroad" data-role="page" data-url="hammerhillroad">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>斧山道游泳池</h1>
       </div><!-- /header -->
@@ -1487,7 +1490,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1502,7 +1505,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #jordanvalley -->
     <div id="jordanvalley" data-role="page" data-url="jordanvalley">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>佐敦谷游泳池</h1>
       </div><!-- /header -->
@@ -1545,7 +1548,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1560,7 +1563,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #kwuntong -->
     <div id="kwuntong" data-role="page" data-url="kwuntong">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>觀塘游泳池</h1>
       </div><!-- /header -->
@@ -1603,7 +1606,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1618,7 +1621,7 @@
     
     <!-- Start of area kln list: # areant -->
     <div id="areant" data-role="page" data-url="areant">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#swimming-pools" data-transition="none">返回</a>
         <h1>新界區</h1>
       </div><!-- /header -->
@@ -1656,7 +1659,7 @@
             <li><a href="#tseungkwano" data-transition="none">將軍澳游泳池</a></li>
         </ul>
       </div> <!-- content -->     
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1671,7 +1674,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #muiwo -->
     <div id="muiwo" data-role="page" data-url="muiwo">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>梅窩游泳池</h1>
       </div><!-- /header -->
@@ -1713,7 +1716,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1728,7 +1731,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #tungchung -->
     <div id="tungchung" data-role="page" data-url="tungchung">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>東涌游泳池</h1>
       </div><!-- /header -->
@@ -1777,7 +1780,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1792,7 +1795,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #jockeyclubyanoitong -->
     <div id="jockeyclubyanoitong" data-role="page" data-url="jockeyclubyanoitong">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>賽馬會仁愛堂游泳池</h1>
       </div><!-- /header -->
@@ -1833,7 +1836,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1848,7 +1851,7 @@
 
 	<!-- Start of swiimming pool paoyuekong: #tuenmun -->
     <div id="tuenmun" data-role="page" data-url="tuenmun">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>屯門游泳池</h1>
       </div><!-- /header -->
@@ -1896,7 +1899,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1911,7 +1914,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #tinshuiwai -->
     <div id="tinshuiwai" data-role="page" data-url="tinshuiwai">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>天水圍游泳池</h1>
       </div><!-- /header -->
@@ -1953,7 +1956,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -1968,7 +1971,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #yuenlong -->
     <div id="yuenlong" data-role="page" data-url="yuenlong">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>元朗游泳池</h1>
       </div><!-- /header -->
@@ -2017,7 +2020,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -2032,7 +2035,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #pingshan -->
     <div id="pingshan" data-role="page" data-url="pingshan">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>屏山天水圍游泳池</h1>
       </div><!-- /header -->
@@ -2079,7 +2082,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -2094,7 +2097,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #shingmunvalley -->
     <div id="shingmunvalley" data-role="page" data-url="shingmunvalley">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>城門谷游泳池</h1>
       </div><!-- /header -->
@@ -2144,7 +2147,7 @@
         <p>* 	設有專供殘疾人士使用的升降台 </p>
         <p>@	城門谷游游泳池內主池水深2米的範圍設有供殘疾人士使用的上落水升降台</p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -2159,7 +2162,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #tsuenkingcircuit -->
     <div id="tsuenkingcircuit" data-role="page" data-url="tsuenkingcircuit">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>荃景圍胡忠游泳池</h1>
       </div><!-- /header -->
@@ -2201,7 +2204,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -2216,7 +2219,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #kwaishing -->
     <div id="kwaishing" data-role="page" data-url="kwaishing">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>天水圍游泳池</h1>
       </div><!-- /header -->
@@ -2259,7 +2262,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -2274,7 +2277,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #northkwaichung -->
     <div id="northkwaichung" data-role="page" data-url="northkwaichung">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>北葵涌賽馬會游泳池</h1>
       </div><!-- /header -->
@@ -2317,7 +2320,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -2332,7 +2335,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #tsingyi -->
     <div id="tsingyi" data-role="page" data-url="tsingyi">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>青衣游泳池</h1>
       </div><!-- /header -->
@@ -2374,7 +2377,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -2389,7 +2392,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #fanling -->
     <div id="fanling" data-role="page" data-url="fanling">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>粉嶺游泳池</h1>
       </div><!-- /header -->
@@ -2438,7 +2441,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -2453,7 +2456,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #sheungshui -->
     <div id="sheungshui" data-role="page" data-url="sheungshui">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>上水游泳池</h1>
       </div><!-- /header -->
@@ -2495,7 +2498,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -2510,7 +2513,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #taipo -->
     <div id="taipo" data-role="page" data-url="taipo">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>大埔游泳池</h1>
       </div><!-- /header -->
@@ -2552,7 +2555,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -2567,7 +2570,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #hintin -->
     <div id="hintin" data-role="page" data-url="hintin">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>顯田游泳池</h1>
       </div><!-- /header -->
@@ -2616,7 +2619,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -2631,7 +2634,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #maonshan -->
     <div id="maonshan" data-role="page" data-url="maonshan">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>馬鞍山游泳池</h1>
       </div><!-- /header -->
@@ -2674,7 +2677,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -2689,7 +2692,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #shatinjockeyclub -->
     <div id="shatinjockeyclub" data-role="page" data-url="shatinjockeyclub">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>沙田賽馬會游泳池</h1>
       </div><!-- /header -->
@@ -2740,7 +2743,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -2755,7 +2758,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #saikung -->
     <div id="saikung" data-role="page" data-url="saikung">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>西貢游泳池</h1>
       </div><!-- /header -->
@@ -2797,7 +2800,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -2812,7 +2815,7 @@
     
     <!-- Start of swiimming pool paoyuekong: #tseungkwano -->
     <div id="tseungkwano" data-role="page" data-url="tseungkwano">
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>將軍澳游泳池</h1>
       </div><!-- /header -->
@@ -2861,7 +2864,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -2877,7 +2880,7 @@
     <!-- Start of schedule page: #schedule -->
     <div data-theme="b" id="schedule" data-role="page" data-url="schedule">
 
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <h1>學習進程</h1>
       </div><!-- /header -->
 
@@ -3256,7 +3259,7 @@
           </li>
         </ul>
       </div><!-- /content -->
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -3272,7 +3275,7 @@
     <!-- Start of calendar page: #calendar -->
     <div data-theme="b" id="calendar" data-role="page" data-url="calendar">
 
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#records" data-transition="none">返回</a>
         <h1>我的月曆</h1>
         <a href="#create" data-icon="plus">新增</a>
@@ -3285,7 +3288,7 @@
           </ul>
         </div>
       </div><!-- /content -->
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -3301,7 +3304,7 @@
     <!-- Start of calorie page: #calorie -->
     <div data-theme="b" id="create" data-role="page" data-url="create">
 
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="back" href="#records" data-transition="none">返回</a>
         <h1>新增記錄</h1>
       </div><!-- /header -->
@@ -3333,7 +3336,7 @@
         </fieldset>
         <a href="#calendar" data-role="button" data-icon="plus" class="create">建立</a>
       </div><!-- /content -->
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -3348,7 +3351,7 @@
 
     <div data-theme="b" id="list" data-role="page" data-url="list">
 
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a data-icon="arrow-l" data-iconpos="notext" class="prev"></a>
         <h1 class="title"></h1>
         <a data-icon="arrow-r" data-iconpos="notext" class="next"></a>
@@ -3356,7 +3359,7 @@
         <ul class="records" data-role="listview" data-theme="d" data-divider-theme="d">
         </ul>
       <a href="#charts" data-role="button">圖表</a>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -3371,13 +3374,13 @@
 
     <div data-theme="b" id="charts" data-role="page" data-url="charts">
 
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <a href="#list" data-icon="back" class="back">返回</a>
         <h1 class="title"></h1>
       </div><!-- /header -->
 
       <canvas id="myCanvas" width="200" height="100"></canvas>
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
@@ -3393,7 +3396,7 @@
     <!-- Start of faq page: #register -->
     <div data-theme="b" id="register" data-role="page" data-url="register">
 
-      <div class="ui-bar-b" data-role="header">
+      <div class="ui-bar-b" data-role="header" ontouchmove="touchMove(event);">
         <h1>我要報名</h1>
       </div><!-- /header -->
 
@@ -3403,7 +3406,7 @@
         </p>
         <a href="http://www.atoughswimmingclub.com/app_register" data-role="button">報名</a>
       </div><!-- /content -->
-      <div data-id="myfooter" data-role="footer" data-position="fixed">
+      <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
             <li><a href="#schedule" class="footer-schedule" data-icon="custom" data-transition="none">學習進程</a></li>
