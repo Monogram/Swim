@@ -35,6 +35,11 @@
       var year = date.getFullYear();
       $("#list .title").text(year + "年" +(month + 1) + "月");
 			var month_records = this.getMonthRecords(year, month);
+      var total_meters = _.reduce(month_records, function(total_meters, month_record) {
+        return total_meters + _.reduce(month_record.records, function(total_meters, record) {
+          return total_meters + record.meters;
+        }, 0);
+      }, 0);
 			var total_calories = _.reduce(month_records, function(total_calories, month_record) {
 				return total_calories + _.reduce(month_record.records, function(total_calories, record) {
 					return total_calories + swim.records.calculateCalories(record);
@@ -42,7 +47,7 @@
 			}, 0);
       $("#list .records").empty().append(
         _.flatten(this.renderRecords(month_records)).concat(
-					$("<li data-role=\"list-divider\" style=\"text-align: center;\">共" + total_calories + "卡</li>").get(0)
+          $("<li data-role=\"list-divider\"><span>共" + total_meters + "米</span><span style=\"float: right;\">共" + total_calories + "卡</span></li>").get(0)
 				)
       ).listview("refresh");
     },	
