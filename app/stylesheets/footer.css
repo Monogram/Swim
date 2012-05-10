@@ -1,33 +1,29 @@
-.ui-footer .ui-navbar .ui-btn .ui-btn-inner {
-  padding-top: 40px !important;
-}
 .ui-footer .ui-navbar .ui-btn .ui-icon {
-  width: 30px!important;
-  height: 30px!important;
-  margin-left: -15px !important;
+  left: 0;
+  top: 0;
   box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -webkit-border-radius: 0 !important;
   border-radius: 0 !important;
+  background-color: transparent;
+  background-size: 100% 100%;
+  margin: 0;
 }
 
 .ui-footer .ui-navbar .footer-schedule .ui-icon {
-  background:  url(../images/footer/envelope.png) 50% 50% no-repeat;
+  background-image:  url(../images/footer/schedule.png);
 }
 
 .ui-footer .ui-navbar .footer-records .ui-icon {
-  background:  url(../images/footer/envelope.png) 50% 50% no-repeat;
+  background-image:  url(../images/footer/records.png);
 }
 
 .ui-footer .ui-navbar .footer-information .ui-icon {
-  background:  url(../images/footer/envelope.png) 50% 50% no-repeat;
+  background-image:  url(../images/footer/information.png);
 }
 
 .ui-footer .ui-navbar .footer-about .ui-icon {
-  background:  url(../images/footer/envelope.png) 50% 50% no-repeat;
+  background-image:  url(../images/footer/about.png);
 }
 
 .ui-footer .ui-navbar .footer-register .ui-icon {
-  background:  url(../images/footer/envelope.png) 50% 50% no-repeat;
+  background-image:  url(../images/footer/register.png);
 }
