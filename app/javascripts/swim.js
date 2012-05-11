@@ -4,6 +4,7 @@
       this.poster.initiate();
       this.schedule.initiate();
       this.records.initiate();
+      this.content.initiate();
       this.footer.initiate();
     }
   };

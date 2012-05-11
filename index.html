@@ -7,6 +7,7 @@
     <link href="app/stylesheets/records/charts.css" rel="stylesheet">
     <link href="app/stylesheets/records/datepicker.css" rel="stylesheet">
     <link href="app/stylesheets/about.css" rel="stylesheet">
+    <link href="app/stylesheets/content.css" rel="stylesheet">
     <link href="app/stylesheets/footer.css" rel="stylesheet">
     <link href="app/stylesheets/jquery.mobile.css" rel="stylesheet">
 		<link href="app/stylesheets/poster.css" rel="stylesheet">
@@ -25,6 +26,7 @@
     <script type="text/javascript" src="vendor/underscore-min.js"></script>
     <script type="text/javascript" src="vendor/cordova-1.6.1.js"></script>
     <script type="text/javascript" src="app/javascripts/swim.js"></script>
+    <script type="text/javascript" src="app/javascripts/content.js"></script>
     <script type="text/javascript" src="app/javascripts/footer.js"></script>
     <script type="text/javascript" src="app/javascripts/poster.js"></script>
     <script type="text/javascript" src="app/javascripts/records.js"></script>
@@ -150,29 +152,30 @@
         <a data-icon="back" href="#information" data-transition="none">返回</a>
         <h1>游泳謬誤逐點捉</h1>
       </div><!-- /header -->
-
-      <div data-role="collapsible" data-collapsed="true" data-theme="b">
-        <h3>學游泳一定要有天份先學得曉？</h3>
-        <p>
-          這個誤解常令習泳者卻步，認為身型、能力、天份等方面缺憾，以致無法學懂游泳。游泳實質是一種技術，如踏腳踏車、用電腦等，適當的教導，加上練習，所有人            
-          也能學會游泳的。
-        </p>
-      </div>
-      <div data-role="collapsible" data-collapsed="true" data-theme="b">
-        <h3>游到就得喇，姿勢差，唔駛理喇！</h3>
-        <p>
-          很多自學游泳者能在泳池中游來游去，只是動作怪點差點，速度慢一點，認為沒有問題，結果沒有深究。
-          從運動分析現象，游泳姿態是極之重要。不但能提升速度外，亦與肌肉關節活動得宜與否有關。不正確的游泳動作，不但有阻保健功效，甚至令肌肉勞損，傷及
-          腱，造成創傷。因此，正確泳姿亦有助減低游泳受傷的機會。
-        </p>
-      </div>
-      <div data-role="collapsible" data-collapsed="true" data-theme="b">
-        <h3>冬天太凍了，夏天才可游泳。</h3>
-        <p>
-          香港冬天是寒冷的，但學員停止習訓等於進度停頓。經驗所得，夏天游泳冬天停的學員在新泳季，很多需要從頭學起。結果浪費了金錢、時間和努力。
-          香港現有恆溫泳池，氣溫保持在廿五度以上，水溫亦保持在廿五至廿八度。絕對適合游泳溫。試想想，在冬天停止游泳，是否代表哮喘、鼻敏感也會停止發作呢？為
-          身體著想，要改改這個觀念了。
-        </p>
+      <div data-theme="b" data-role="content">
+        <div data-role="collapsible" data-collapsed="true" data-theme="b">
+          <h3>學游泳一定要有天份先學得曉？</h3>
+          <p>
+            這個誤解常令習泳者卻步，認為身型、能力、天份等方面缺憾，以致無法學懂游泳。游泳實質是一種技術，如踏腳踏車、用電腦等，適當的教導，加上練習，所有人            
+            也能學會游泳的。
+          </p>
+        </div>
+        <div data-role="collapsible" data-collapsed="true" data-theme="b">
+          <h3>游到就得喇，姿勢差，唔駛理喇！</h3>
+          <p>
+            很多自學游泳者能在泳池中游來游去，只是動作怪點差點，速度慢一點，認為沒有問題，結果沒有深究。
+            從運動分析現象，游泳姿態是極之重要。不但能提升速度外，亦與肌肉關節活動得宜與否有關。不正確的游泳動作，不但有阻保健功效，甚至令肌肉勞損，傷及
+            腱，造成創傷。因此，正確泳姿亦有助減低游泳受傷的機會。
+          </p>
+        </div>
+        <div data-role="collapsible" data-collapsed="true" data-theme="b">
+          <h3>冬天太凍了，夏天才可游泳。</h3>
+          <p>
+            香港冬天是寒冷的，但學員停止習訓等於進度停頓。經驗所得，夏天游泳冬天停的學員在新泳季，很多需要從頭學起。結果浪費了金錢、時間和努力。
+            香港現有恆溫泳池，氣溫保持在廿五度以上，水溫亦保持在廿五至廿八度。絕對適合游泳溫。試想想，在冬天停止游泳，是否代表哮喘、鼻敏感也會停止發作呢？為
+            身體著想，要改改這個觀念了。
+          </p>
+        </div>
       </div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
@@ -195,25 +198,26 @@
         <a data-icon="back" href="#information" data-transition="none">返回</a>
         <h1>常見問題</h1>
       </div><!-- /header -->
-
-      <div data-role="collapsible" data-collapsed="true" data-theme="b">
-        <h3>Q.想學游泳，但浮不起。是否不能學游泳？</h3>
-        <p>A.人類理論上都是能浮在水面的。身體肌肉較多，浮力會差些，但只要練習閉氣、正確的身體動作和踢水動作配合，每一個人也能在水面浮起。換言之，你也能學會
-        游泳的。請教專業教練吧!
-        </p>
-      </div>
-      <div data-role="collapsible" data-collapsed="true" data-theme="b">
-        <h3>Q.游泳時，水衝進鼻孔內，換唔到氣。可以點做？</h3>
-        <p>A.游泳時呼吸的動作有別於陸上呼吸。應該改用口吸鼻呼的方法。其次，呼吸需要配合身體動作，頭出水時吸，頭入水後呼。另外，吸氣張口用力；輕呼慢吹。
-        做到以上三點，情況應該可以改善。
-        </p>
-      </div>
-      <div data-role="collapsible" data-collapsed="true" data-theme="b">
-        <h3>Q.游泳時，水經常入耳朵，聽不到東西，緊張便游不到。可以點做？</h3>
-        <p>A. 這裡有兩重點。一是游泳的心理準備；二是水入耳後的處理。游泳前要了解自己的泳術，若水入耳會緊張，代表需要多加練習，建議在泳池作適應。二是處理方
-        法。水入耳其實問題不大，回岸後處理即可。方法是將頭向相反方向傾側，待水流出。若未成功，可將水灌入該耳孔內後，稍等，再將頭向相反方向傾側，便可清理積
-        水。萬試萬靈。
-        </p>
+      <div data-theme="b" data-role="content">
+        <div data-role="collapsible" data-collapsed="true" data-theme="b">
+          <h3>Q.想學游泳，但浮不起。是否不能學游泳？</h3>
+          <p>A.人類理論上都是能浮在水面的。身體肌肉較多，浮力會差些，但只要練習閉氣、正確的身體動作和踢水動作配合，每一個人也能在水面浮起。換言之，你也能學會
+          游泳的。請教專業教練吧!
+          </p>
+        </div>
+        <div data-role="collapsible" data-collapsed="true" data-theme="b">
+          <h3>Q.游泳時，水衝進鼻孔內，換唔到氣。可以點做？</h3>
+          <p>A.游泳時呼吸的動作有別於陸上呼吸。應該改用口吸鼻呼的方法。其次，呼吸需要配合身體動作，頭出水時吸，頭入水後呼。另外，吸氣張口用力；輕呼慢吹。
+          做到以上三點，情況應該可以改善。
+          </p>
+        </div>
+        <div data-role="collapsible" data-collapsed="true" data-theme="b">
+          <h3>Q.游泳時，水經常入耳朵，聽不到東西，緊張便游不到。可以點做？</h3>
+          <p>A. 這裡有兩重點。一是游泳的心理準備；二是水入耳後的處理。游泳前要了解自己的泳術，若水入耳會緊張，代表需要多加練習，建議在泳池作適應。二是處理方
+          法。水入耳其實問題不大，回岸後處理即可。方法是將頭向相反方向傾側，待水流出。若未成功，可將水灌入該耳孔內後，稍等，再將頭向相反方向傾側，便可清理積
+          水。萬試萬靈。
+          </p>
+        </div>
       </div><!-- /content -->
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
@@ -264,7 +268,7 @@
         <a data-icon="back" href="#swimming-pools" data-transition="none">返回</a>
         <h1>香港島</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
         <ul data-role="listview" class="hk-listview">
             <li data-role="list-divider">南區</li>
             <li><a href="#paoyuekong" data-transition="none">包玉剛游泳池</a></li>
@@ -280,6 +284,7 @@
             <li><a href="#islandeast" data-transition="none">港島東游泳池</a></li>
             <li><a href="#siusaiwan" data-transition="none">小西灣游泳池</a></li>
         </ul> 
+      </div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -299,7 +304,7 @@
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>包玉剛游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>香港黃竹坑深灣道2號</p>
@@ -338,6 +343,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+      </div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -357,7 +363,7 @@
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>堅尼地城游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>香港堅尼地城西祥街北2號</p>
@@ -398,6 +404,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+      </div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -417,7 +424,7 @@
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>中山紀念公園游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>香港西營盤東邊街北16號</p>
@@ -462,6 +469,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -481,7 +489,7 @@
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>摩理臣山游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>香港灣仔愛群道7號</p>
@@ -526,6 +534,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -545,7 +554,7 @@
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>灣仔游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>香港灣仔港灣道27號</p>
@@ -582,6 +591,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -601,7 +611,7 @@
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>柴灣游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>香港柴灣新廈街345號</p>
@@ -640,6 +650,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -659,7 +670,7 @@
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>維多利亞公園游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>香港銅鑼灣興發街維多利亞公園</p>
@@ -699,6 +710,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -718,7 +730,7 @@
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>港島東游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>香港西灣河鯉景道52號</p>
@@ -763,6 +775,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -782,7 +795,7 @@
         <a data-icon="back" href="#areahk" data-transition="none">返回</a>
         <h1>小西灣游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>香港小西灣道15號小西灣綜合大樓一樓</p>
@@ -827,6 +840,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -887,7 +901,7 @@
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>荔枝角公園游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>九龍荔枝角荔灣道1號</p>
@@ -934,6 +948,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -953,7 +968,7 @@
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>李鄭屋游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>九龍深水埗廣利道25號 </p>
@@ -992,6 +1007,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1011,7 +1027,7 @@
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>深水埗公園游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>九龍深水埗荔枝角道733號</p>
@@ -1059,6 +1075,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1078,7 +1095,7 @@
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>九龍公園游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>九龍尖沙咀柯士甸道22號九龍公園</p>
@@ -1124,6 +1141,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1143,7 +1161,7 @@
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>大角咀游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>九龍大角咀福全街63號大角咀市政大廈4樓 </p>
@@ -1187,6 +1205,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1206,7 +1225,7 @@
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>大環山游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>九龍紅磡環海街7號</p>
@@ -1245,6 +1264,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1264,7 +1284,7 @@
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>何文田游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>九龍何文田忠義街1號</p>
@@ -1310,6 +1330,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1329,7 +1350,7 @@
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>九龍仔游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>九龍延文禮士道13號九龍仔公園</p>
@@ -1368,6 +1389,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1387,7 +1409,7 @@
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>摩士公園游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>九龍黃大仙鳳舞街80號</p>
@@ -1427,6 +1449,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1446,7 +1469,7 @@
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>斧山道游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>九龍黃大仙龍翔道30號</p>
@@ -1492,6 +1515,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1511,7 +1535,7 @@
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>佐敦谷游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>九龍牛頭角彩霞道</p>
@@ -1550,6 +1574,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1569,7 +1594,7 @@
         <a data-icon="back" href="#areakln" data-transition="none">返回</a>
         <h1>觀塘游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>九龍觀塘佳廉道10號</p>
@@ -1608,6 +1633,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1680,7 +1706,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>梅窩游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>大嶼山梅窩銀石街5號</p>
@@ -1718,6 +1744,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1737,7 +1764,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>東涌游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>東涌達東路5號</p>
@@ -1782,6 +1809,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1801,7 +1829,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>賽馬會仁愛堂游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>屯門青松觀路</p>
@@ -1838,6 +1866,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1857,7 +1886,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>屯門游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>屯門海皇路</p>
@@ -1901,6 +1930,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1920,7 +1950,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>天水圍游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>天水圍天柏路1號</p>
@@ -1958,6 +1988,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -1977,7 +2008,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>元朗游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>元朗體育路10號</p>
@@ -2022,6 +2053,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -2041,7 +2073,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>屏山天水圍游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>天水圍聚星路1號 </p>
@@ -2084,6 +2116,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -2103,7 +2136,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>城門谷游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>荃灣城門道21號</p>
@@ -2149,6 +2182,7 @@
         <p>* 	設有專供殘疾人士使用的升降台 </p>
         <p>@	城門谷游游泳池內主池水深2米的範圍設有供殘疾人士使用的上落水升降台</p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -2168,7 +2202,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>荃景圍胡忠游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>荃灣荃景圍178號</p>
@@ -2206,6 +2240,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -2225,7 +2260,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>天水圍游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>葵盛游泳池</p>
@@ -2264,6 +2299,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -2283,7 +2319,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>北葵涌賽馬會游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>葵涌和宜合道290號</p>
@@ -2322,6 +2358,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -2341,7 +2378,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>青衣游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>青衣青敬路</p>
@@ -2379,6 +2416,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -2398,7 +2436,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>粉嶺游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>粉嶺新運路73號</p>
@@ -2443,6 +2481,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -2462,7 +2501,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>上水游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>上水天平路38號</p>
@@ -2500,6 +2539,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -2519,7 +2559,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>大埔游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>大埔汀太路11號</p>
@@ -2557,6 +2597,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -2576,7 +2617,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>顯田游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>沙田大圍車公廟路68號</p>
@@ -2621,6 +2662,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -2640,7 +2682,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>馬鞍山游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>馬鞍山鞍駿街33號</p>
@@ -2679,6 +2721,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -2698,7 +2741,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>沙田賽馬會游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>沙田源禾路10號</p>
@@ -2745,6 +2788,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -2764,7 +2808,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>西貢游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>西貢惠民路</p>
@@ -2802,6 +2846,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -2821,7 +2866,7 @@
         <a data-icon="back" href="#areant" data-transition="none">返回</a>
         <h1>將軍澳游泳池</h1>
       </div><!-- /header -->
-      
+      <div data-role="content">
       <div data-role="collapsible" data-collapsed="true" data-theme="b">
         <h3>地址</h3>
         <p>將軍澳運隆路9號</p>
@@ -2866,6 +2911,7 @@
         <p>() 	設施的數目</p>
         <p>* 	設有專供殘疾人士使用的升降台 </p>
       </div>
+			</div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
@@ -3358,9 +3404,13 @@
         <h1 class="title"></h1>
         <a data-icon="arrow-r" data-iconpos="notext" class="next"></a>
       </div><!-- /header -->
+      <div data-theme="b" data-role="content">
         <ul class="records" data-role="listview" data-theme="d" data-divider-theme="d">
         </ul>
-      <a href="#charts" data-role="button">圖表</a>
+        <div data-role="fieldcontain">
+          <a href="#charts" data-role="button">圖表</a>
+        </div>
+      </div>
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
           <ul>
