@@ -24,6 +24,7 @@
     <script type="text/javascript" src="vendor/jQuery.ui.datepicker.js"></script>
     <script type="text/javascript" src="vendor/jquery.ui.datepicker.mobile.js"></script>
     <script type="text/javascript" src="vendor/underscore-min.js"></script>
+    <script type="text/javascript" src="vendor/utf8tobig5.js"></script>
     <script type="text/javascript" src="vendor/cordova-1.6.1.js"></script>
     <script type="text/javascript" src="app/javascripts/swim.js"></script>
     <script type="text/javascript" src="app/javascripts/content.js"></script>
@@ -3306,6 +3307,23 @@
             </div>
           </li>
         </ul>
+        <div class="ui-body">
+          <div data-role="fieldcontain">
+            <label for="name">姓名:</label>
+            <input type="text" name="name" id="name" value=""  />
+          </div>
+          <div data-role="fieldcontain">
+            <label for="phone">電話:</label>
+            <input type="text" name="phone" id="phone" value=""  />
+          </div>
+          <div data-role="fieldcontain">
+            <label for="age">年齡:</label>
+            <input type="range" name="age" id="age" value="10" min="0" max="100" data-highlight="true"  />
+          </div>
+          <div data-role="fieldcontain">
+            <a data-role="button" class="submit">發送評估給敎練</a>
+          </div>
+        </div>
       </div><!-- /content -->
       <div data-id="myfooter" data-role="footer" data-position="fixed" ontouchmove="touchMove(event);">
         <div data-role="navbar">
