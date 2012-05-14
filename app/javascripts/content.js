@@ -7,11 +7,10 @@
       this.initiateIScroll();
       this.resizeBackground();
     },
-    initiateIScroll: function() {console.log("a")
+    initiateIScroll: function() {
       new iScroll($(".ui-content:visible")[0], {
-        vScrollbar : false,
-        bounce     : false,
-        momentum   : true
+        vScrollbar: false,
+        bounce: false
       });
     },
     resizeBackground: function() {
