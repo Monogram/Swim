@@ -151,10 +151,10 @@
 			this.paddingTop = 50;
 			this.backgroundColors = [
 			  [0, "#666666"],
-			  [500, "#AE57A4"],
-			  [2000, "#EAC100"],
-			  [2300, "#FF8000"],
-			  [2500, "#FF0000"]
+			  [3000, "#AE57A4"],
+			  [6000, "#EAC100"],
+			  [8000, "#FF8000"],
+			  [10000, "#FF0000"]
 			];
 			this.frameColor = "#CCFFFF";
 			this.gridColor = "#CCFFFF";
