@@ -1,3 +1,6 @@
+#poster .ui-content {
+  padding: 0;
+}
 .poster {
   background-image:  url(../images/poster/poster.png);
   background-position: 50% 50%;
