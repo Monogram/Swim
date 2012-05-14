@@ -1,7 +1,18 @@
 (function(swim) {
   swim.content = {
     initiate: function() {
-      $(document).live("pageshow", this.resizeBackground);
+      $(document).live("pageshow", _.bind(this.onPageShow, this));
+    },
+    onPageShow: function() {
+      this.initiateIScroll();
+      this.resizeBackground();
+    },
+    initiateIScroll: function() {console.log("a")
+      new iScroll($(".ui-content:visible")[0], {
+        vScrollbar : false,
+        bounce     : false,
+        momentum   : true
+      });
     },
     resizeBackground: function() {
       _.defer(function() {
