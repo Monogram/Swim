@@ -28,6 +28,7 @@
       }, this));
 
       $("#list").live("pageshow", _.bind(this.render, this));
+      delete this.initiate;
     },
     render: function() {
       var date = swim.records.current_date;

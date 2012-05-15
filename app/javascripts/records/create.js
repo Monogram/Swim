@@ -33,6 +33,7 @@
       });
 
       $("#create").live("pageshow", _.bind(this.render, this));
+      delete this.initiate;
     },
     render: function() {
       $("#create .calendar").replaceWith($("<div>").addClass("calendar"));

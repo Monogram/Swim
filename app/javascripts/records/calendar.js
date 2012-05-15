@@ -26,6 +26,7 @@
       }, this));
 
       $("#calendar").live("pageshow", _.bind(this.render, this));
+      delete this.initiate;
     },
     onSelect: function(dateText) {
 			swim.records.current_date = _.isString(dateText) ? swim.records.dateTextToDate(dateText) : dateText;

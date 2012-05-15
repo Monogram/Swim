@@ -42,6 +42,7 @@
         }, this));
       }, this));
       $("#schedule").live("pageshow", _.bind(this.render, this));
+      delete this.initiate;
     },
     strToBig5: function(str) {
       return EncodedUTF8ToBig5(encodeURIComponent(str));

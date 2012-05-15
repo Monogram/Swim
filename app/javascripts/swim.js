@@ -6,6 +6,7 @@
       this.records.initiate();
       this.content.initiate();
       this.footer.initiate();
+      delete this.initiate;
     }
   };
 }).call(this);

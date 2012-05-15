@@ -22,6 +22,7 @@
         });
         $(".ui-footer .ui-navbar li a.footer-" + this.page + ":visible").addClass("ui-btn-active");
       }, this));
+      delete this.initiate;
     }
   };
 })(swim);

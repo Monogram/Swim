@@ -9,6 +9,7 @@
           "height": img_height / img_width * Math.min(img_width, window.innerWidth)
         });
       });
+      delete this.initiate;
     }
   };
 })(swim);

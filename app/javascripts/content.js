@@ -2,6 +2,7 @@
   swim.content = {
     initiate: function() {
       $(document).live("pageshow", _.bind(this.onPageShow, this));
+      delete this.initiate;
     },
     onPageShow: function() {
       this.resizeBackground();
