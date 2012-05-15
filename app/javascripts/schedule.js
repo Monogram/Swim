@@ -9,13 +9,13 @@
           swim.storage.set("schedule", schedule);
         });
 
-        $("#schedule .schedule").die("click").live("click", function(event) {
+        $("#schedule .schedule").die("touchstart").live("touchstart", function(event) {
           var li = $(event.target).closest(".schedule");
           li.find(".ui-icon").toggleClass("ui-icon-arrow-d").toggleClass("ui-icon-arrow-u");
           li.next().toggle();
         });
 
-        $("#schedule .submit").die("click").live("click", _.bind(function(event) {
+        $("#schedule .submit").die("touchstart").live("touchstart", _.bind(function(event) {
           event.preventDefault();
           var mailto = "mailto:a.tough.swimming.club@gmail.com";
           mailto += "?subject=" + encodeURI("學員評估");
