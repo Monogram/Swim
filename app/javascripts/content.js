@@ -4,13 +4,15 @@
       $(document).live("pageshow", _.bind(this.onPageShow, this));
     },
     onPageShow: function() {
-      this.initiateIScroll();
       this.resizeBackground();
+      this.initiateIScroll();
     },
     initiateIScroll: function() {
-      new iScroll($(".ui-content:visible")[0], {
-        vScrollbar: false,
-        bounce: false
+      _.defer(function() {
+        new iScroll($(".ui-content:visible")[0], {
+          vScrollbar: false,
+          bounce: false
+        });
       });
     },
     resizeBackground: function() {
