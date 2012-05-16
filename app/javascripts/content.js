@@ -3,13 +3,9 @@
     myScroll: null,
     initiate: function() {
       document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-
-      $(document).live("pageshow", _.bind(this.onPageShow, this));
+      $(document).live("pageinit", _.bind(this.resizeBackground, this));
+      $(document).live("pageshow", _.bind(this.initiateIScroll, this));
       delete this.initiate;
-    },
-    onPageShow: function() {
-      this.resizeBackground();
-      this.initiateIScroll();
     },
     initiateIScroll: function() {
       _.defer(_.bind(function() {
