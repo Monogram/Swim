@@ -1,6 +1,9 @@
 (function(swim) {
   swim.content = {
+    myScroll: null,
     initiate: function() {
+      document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
       $(document).live("pageshow", _.bind(this.onPageShow, this));
       delete this.initiate;
     },
@@ -9,12 +12,16 @@
       this.initiateIScroll();
     },
     initiateIScroll: function() {
-      _.defer(function() {
-        new iScroll($(".ui-content:visible")[0], {
+      _.defer(_.bind(function() {
+        if (this.myScroll) {
+          this.myScroll.destroy(true);
+          delete this.myScroll;
+        }
+        this.myScroll = new iScroll($(".ui-content:visible")[0], {
           vScrollbar: false,
           bounce: false
         });
-      });
+      }, this));
     },
     resizeBackground: function() {
       _.defer(function() {
