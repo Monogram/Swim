@@ -14,12 +14,6 @@
       }, this));
 
       $(document).live("pageshow", _.bind(function(){
-        var size = window.innerWidth / 5;
-        $(".ui-btn-icon-top .ui-btn-inner").css("padding", size + "px 0 0");
-        $(".ui-footer .ui-navbar .ui-btn .ui-icon").css({
-          height: size,
-          width: size
-        });
         $(".ui-footer .ui-navbar li a.footer-" + this.page + ":visible").addClass("ui-btn-active");
       }, this));
       delete this.initiate;

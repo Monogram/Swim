@@ -1,11 +1,16 @@
+.ui-footer .ui-navbar .ui-btn-icon-top .ui-btn-inner {
+  padding-top: 40px
+}
+
 .ui-footer .ui-navbar .ui-btn .ui-icon {
-  left: 0;
   top: 0;
   box-shadow: none !important;
   border-radius: 0 !important;
   background-color: transparent;
   background-size: 100% 100%;
-  margin: 0;
+  margin-left: -20px;
+  height: 40px;
+  width: 40px;
 }
 
 .ui-footer .ui-navbar .ui-btn-active {
