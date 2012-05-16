@@ -41,7 +41,7 @@
           window.location.href = mailto;
         }, this));
       }, this));
-      $("#schedule").live("pageshow", _.bind(this.render, this));
+      $("#schedule").live("pageinit", _.bind(this.render, this));
       delete this.initiate;
     },
     strToBig5: function(str) {
@@ -52,7 +52,6 @@
       _.each(schedule, function(checked, id) {
         $("#schedule-" + id).attr("checked", checked).checkboxradio("refresh");
       });
-      $(".schedule").next().hide();
     }
   };
 })(swim);
