@@ -3,7 +3,7 @@
     page: "",
     initiate: function() {
       $(document).live( "pageinit", _.bind(function(){
-        $(".ui-footer .ui-navbar li a").die("touchstart").live("touchstart", _.bind(function(event) {
+        $(".ui-footer .ui-navbar li a").die("click").live("click", _.bind(function(event) {
           _.each(["schedule", "records", "information", "about", "register"], _.bind(function(p) {
             if ($(event.target).closest("a").hasClass("footer-" + p))  {
               this.page = p;

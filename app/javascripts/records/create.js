@@ -2,7 +2,7 @@
   swim.records.create = {
     initiate: function() {
       $("#create").live( "pageinit", function(){
-        $("#create .create").die("touchstart").live("touchstart", function() {
+        $("#create .create").die("click").live("click", function() {
           var date = $("#create .calendar").val().split(/\//);
           var key = [parseInt(date[1], 10), parseInt(date[0], 10) - 1, date[2]].join("-");
           var minutes = parseInt($("#create #minutes").val(), 10);

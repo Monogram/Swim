@@ -2,7 +2,7 @@
   swim.records.list = {
     initiate: function() {
       $("#list").live( "pageinit", _.bind(function(){
-        $("#list .prev").die("touchstart").live("touchstart", _.bind(function() {
+        $("#list .prev").die("click").live("click", _.bind(function() {
           var date = swim.records.current_date;
           var month = date.getMonth();
           var year = date.getFullYear();
@@ -14,7 +14,7 @@
           this.render();
         }, this));
 
-        $("#list .next").die("touchstart").live("touchstart", _.bind(function() {
+        $("#list .next").die("click").live("click", _.bind(function() {
           var date = swim.records.current_date;
           var month = date.getMonth();
           var year = date.getFullYear();
