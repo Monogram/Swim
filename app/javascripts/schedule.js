@@ -40,6 +40,10 @@
           }
           window.location.href = mailto;
         }, this));
+
+				$("#schedule input[type=text]").click(function(){
+					$(this).focus();
+				});
       }, this));
       $("#schedule").bind("pageinit", _.bind(this.render, this));
       delete this.initiate;
