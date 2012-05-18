@@ -6,6 +6,10 @@
   width: 100%;
 }
 
+.page-with-padding {
+  padding: 15px;
+}
+
 .ui-page.ui-body-b,
 .ui-content.ui-body-b,
 .ui-page.ui-body-c,

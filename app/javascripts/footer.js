@@ -2,19 +2,16 @@
   swim.footer = {
     page: "",
     initiate: function() {
-      $(document).live( "pageinit", _.bind(function(){
-        $(".ui-footer .ui-navbar li a").die("click").live("click", _.bind(function(event) {
-          _.each(["schedule", "records", "information", "about", "register"], _.bind(function(p) {
-            if ($(event.target).closest("a").hasClass("footer-" + p))  {
-              this.page = p;
-              return true;
-            }
-          }, this))
-        }, this));
-      }, this));
+      $(document).bind( "pageinit", _.bind(function(){
+        $(".ui-footer .ui-navbar li a").bind("click", function(event) {
+          var obj = $(event.target).closest("a");
+          $(".ui-footer .ui-navbar li a").removeClass("ui-btn-active");
+          obj.addClass("ui-btn-active");
 
-      $(document).live("pageshow", _.bind(function(){
-        $(".ui-footer .ui-navbar li a.footer-" + this.page + ":visible").addClass("ui-btn-active");
+//          $(".page").hide();
+//          $(".page#" + obj.attr("target")).show();
+//          swim.content.myScroll.refresh();
+        });
       }, this));
       delete this.initiate;
     }

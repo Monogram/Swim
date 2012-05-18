@@ -1,21 +1,21 @@
 (function(swim) {
   swim.schedule = {
     initiate: function() {
-      $("#schedule").live( "pageinit", _.bind(function(){
-        $("#schedule input[type=checkbox]").die("change").live("change", function(event) {
+      $(document).bind( "pageinit", _.bind(function(){
+        $("#schedule input[type=checkbox]").unbind("change").bind("change", function(event) {
           var checkbox = $(event.target).closest("input[type=checkbox]");
           var schedule = swim.storage.get("schedule") || {};
           schedule[checkbox.attr("id").replace(/schedule-/, "")] = checkbox.is(":checked");
           swim.storage.set("schedule", schedule);
         });
 
-        $("#schedule .schedule").die("click").live("click", function(event) {
+        $("#schedule .schedule").unbind("click").bind("click", function(event) {
           var li = $(event.target).closest(".schedule");
           li.find(".ui-icon").toggleClass("ui-icon-arrow-d").toggleClass("ui-icon-arrow-u");
           li.next().toggle();
         });
 
-        $("#schedule .submit").die("click").live("click", _.bind(function(event) {
+        $("#schedule .submit").unbind("click").bind("click", _.bind(function(event) {
           event.preventDefault();
           var mailto = "mailto:a.tough.swimming.club@gmail.com";
           mailto += "?subject=" + encodeURI("學員評估");
@@ -41,7 +41,7 @@
           window.location.href = mailto;
         }, this));
       }, this));
-      $("#schedule").live("pageinit", _.bind(this.render, this));
+      $("#schedule").bind("pageinit", _.bind(this.render, this));
       delete this.initiate;
     },
     strToBig5: function(str) {

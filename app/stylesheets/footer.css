@@ -14,7 +14,7 @@
 }
 
 .ui-footer .ui-navbar .ui-btn-active {
-  background: -moz-linear-gradient(#555555, #383838) repeat scroll 0 0 #444444;
+  background: -moz-linear-gradient(#666666, #444444) repeat scroll 0 0 #444444;
   border: 0 none !important;
   box-shadow: 0 0 12px transparent !important;
 }

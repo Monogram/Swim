@@ -1,8 +1,8 @@
 (function(swim) {
   swim.records.create = {
     initiate: function() {
-      $("#create").live( "pageinit", function(){
-        $("#create .create").die("click").live("click", function() {
+      $(document).bind( "pageinit", _.bind(function(){
+        $("#create .create").unbind("click").bind("click", _.bind(function() {
           var date = $("#create .calendar").val().split(/\//);
           var key = [parseInt(date[1], 10), parseInt(date[0], 10) - 1, date[2]].join("-");
           var minutes = parseInt($("#create #minutes").val(), 10);
@@ -29,10 +29,14 @@
             });
           }
           swim.storage.set("records", records);
-        });
-      });
 
-      $("#create").live("pageshow", _.bind(this.render, this));
+          swim.records.calendar.render();
+          $(".page#create").hide();
+          $(".page#calendar").show();
+          swim.content.myScroll.refresh();
+        }, this));
+        this.render();
+      }, this));
       delete this.initiate;
     },
     render: function() {

@@ -1,14 +1,14 @@
 ﻿(function(swim) {
   swim.records.calendar = {
     initiate: function() {
-      $("#calendar").live( "pageinit", _.bind(function(){
-        $("#calendar .records li").die("click").live("click", _.bind(function(event) {
+      $(document).bind( "pageinit", _.bind(function(){
+        $("#calendar .records li").live("click", _.bind(function(event) {
           if ($(event.target).closest(".delete").length === 0) {
             $(event.target).closest("li").find(".delete").toggle();
           }
         }, this));
 
-        $("#calendar .records li .delete").die("click").live("click", _.bind(function(event) {
+        $("#calendar .records li .delete").live("click", _.bind(function(event) {
           var records = swim.storage.get("records");
           var date = $("#calendar .calendar").val().split(/\//);
           var key = [parseInt(date[1], 10), parseInt(date[0], 10) - 1, date[2]].join("-");
@@ -23,9 +23,10 @@
           swim.storage.set("records", records);
           this.render();
         }, this));
+				
+				this.render();
       }, this));
 
-      $("#calendar").live("pageshow", _.bind(this.render, this));
       delete this.initiate;
     },
     onSelect: function(dateText) {

@@ -3,33 +3,47 @@
     myScroll: null,
     initiate: function() {
       document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-      $(document).live("pageinit", _.bind(this.resizeBackground, this));
-      $(document).live("pageshow", _.bind(this.initiateIScroll, this));
+      $(document).bind("pageshow", _.bind(this.onPageLoad, this));
       delete this.initiate;
     },
-    initiateIScroll: function() {
+    onPageLoad: function() {
+      this.bindEvents();
       _.defer(_.bind(function() {
-        if (this.myScroll) {
-          this.myScroll.destroy(true);
-          delete this.myScroll;
-        }
-        this.myScroll = new iScroll($(".ui-content:visible")[0], {
-          vScrollbar: false,
-          bounce: false
-        });
+        this.resizeBackground();
+        this.initiateIScroll();
       }, this));
     },
-    resizeBackground: function() {
-      _.defer(function() {
-        $(".ui-content:visible").css(
-          "height",
-          window.innerHeight -
-          $(".ui-header:visible").outerHeight(true) -
-          $(".ui-footer:visible").outerHeight(true) -
-          $(".ui-content:visible").outerHeight(true) +
-          $(".ui-content:visible").height()
-        );
+    bindEvents: function() {
+      $(".to-page").bind("click", function(event) {
+        var obj = $(event.target).closest(".to-page");
+        $(".page").hide();
+        $(".page#" + obj.attr("target")).show();
+        swim.content.myScroll.refresh();
       });
+      $(".refresh-iscroll, .ui-collapsible").bind("click", function(event) {
+        _.defer(function() {
+          swim.content.myScroll.refresh();
+        });
+      });
+    },
+    initiateIScroll: function() {
+      if (this.myScroll) {
+        delete this.myScroll;
+      }
+      this.myScroll = new iScroll($(".ui-content:visible")[0], {
+        vScrollbar: false,
+        bounce: false
+      });
+    },
+    resizeBackground: function() {
+      $(".ui-content:visible").css(
+        "height",
+        window.innerHeight -
+        $(".ui-header:visible").outerHeight(true) -
+        $(".ui-footer:visible").outerHeight(true) -
+        $(".ui-content:visible").outerHeight(true) +
+        $(".ui-content:visible").height()
+      );
     }
   };
 })(swim);

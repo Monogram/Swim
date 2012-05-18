@@ -1,7 +1,7 @@
 ﻿(function(swim) {
   swim.records.charts = {
     initiate: function() {
-      $("#charts").live("pageshow", _.bind(this.render, this));
+      //$("#charts").bind("pageshow", _.bind(this.render, this));
       delete this.initiate;
     },
 

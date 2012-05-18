@@ -1,8 +1,8 @@
 ﻿(function(swim) {
   swim.records.list = {
     initiate: function() {
-      $("#list").live( "pageinit", _.bind(function(){
-        $("#list .prev").die("click").live("click", _.bind(function() {
+      $(document).bind( "pageinit", _.bind(function(){
+        $("#list .prev").unbind("click").bind("click", _.bind(function() {
           var date = swim.records.current_date;
           var month = date.getMonth();
           var year = date.getFullYear();
@@ -14,7 +14,7 @@
           this.render();
         }, this));
 
-        $("#list .next").die("click").live("click", _.bind(function() {
+        $("#list .next").unbind("click").bind("click", _.bind(function() {
           var date = swim.records.current_date;
           var month = date.getMonth();
           var year = date.getFullYear();
@@ -25,9 +25,16 @@
           );
           this.render();
         }, this));
+				
+				$("#list .to-charts").unbind("click").bind("click", _.bind(function() {
+          swim.records.charts.render();
+          $(".page#list").hide();
+          $(".page#charts").show();
+          swim.content.myScroll.refresh();
+        }, this));
+				
+				this.render();
       }, this));
-
-      $("#list").live("pageshow", _.bind(this.render, this));
       delete this.initiate;
     },
     render: function() {
