@@ -37,7 +37,14 @@
       }
       this.myScroll = new iScroll($(".ui-content:visible")[0], {
         vScrollbar: false,
-        bounce: false
+        bounce: false,
+        onBeforeScrollStart: function (e) {
+          var target = e.target;
+          while (target.nodeType != 1) target = target.parentNode;
+
+          if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
+            e.preventDefault();
+        }
       });
     },
     resizeBackground: function() {
