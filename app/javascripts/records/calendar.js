@@ -2,6 +2,14 @@
   swim.records.calendar = {
     initiate: function() {
       $(document).bind( "pageinit", _.bind(function(){
+				$("#header-calendar .to-create").bind("click", _.bind(function() {
+					swim.records.create.render();
+					$(".header").hide();
+					$(".header#header-create").show();
+					$(".page#calendar").hide();
+					$(".page#create").show();
+					swim.content.myScroll.refresh();
+				}, this));
         $("#calendar .records li").live("click", _.bind(function(event) {
           if ($(event.target).closest(".delete").length === 0) {
             $(event.target).closest("li").find(".delete").toggle();

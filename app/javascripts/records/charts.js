@@ -169,7 +169,7 @@
 			this.space = 5;
 			this.radius = 2;
 
-      $("#charts .title").text(year + "年" +(month + 1) + "月");
+      $("#header-charts .title").text(year + "年" +(month + 1) + "月");
 			$("#charts canvas").attr({
 				height: Math.max(1000, window.innerHeight - $("#charts .ui-header").outerHeight(true) - $("#charts .ui-footer").outerHeight(true)),
 				width: window.innerWidth

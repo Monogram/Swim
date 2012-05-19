@@ -16,8 +16,13 @@
     bindEvents: function() {
       $(".to-page").bind("click", function(event) {
         var obj = $(event.target).closest(".to-page");
+
+        $(".header").hide();
+        $(".header#header-" + obj.attr("target")).show();
+
         $(".page").hide();
         $(".page#" + obj.attr("target")).show();
+
         swim.content.myScroll.refresh();
       });
       $(".refresh-iscroll, .ui-collapsible").bind("click", function(event) {

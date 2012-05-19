@@ -49,9 +49,69 @@
   <body class="ui-mobile-viewport">
 		<div id="body">
 			<div data-theme="b" data-role="page" data-url="poster">
-
-				<div class="ui-bar-b" data-role="header" data-position="inline">
+				<div id="header-poster" class="ui-bar-b header" data-role="header">
 					<h1>卓毅游泳會</h1>
+				</div>
+				<div id="header-schedule" class="ui-bar-b header" data-role="header" style="display: none;">
+					<h1>自我評估</h1>
+				</div>
+				<div id="header-records" class="ui-bar-b header" data-role="header" style="display: none;">
+					<h1>我的記錄</h1>
+				</div>
+				<div id="header-create" class="ui-bar-b header"  data-role="header" style="display: none;">
+					<a class="to-page" target="records" data-icon="back">返回</a>
+					<h1>新增記錄</h1>
+				</div>
+				<div id="header-calendar" class="ui-bar-b header"  data-role="header" style="display: none;">
+					<a class="to-page" target="records" data-icon="back">返回</a>
+					<h1>我的月曆</h1>
+					<a class="to-create" target="create" data-icon="plus">新增</a>
+				</div>
+				<div id="header-list" class="ui-bar-b header"  data-role="header" style="display: none;">
+					<a data-icon="arrow-l" data-iconpos="notext" class="prev"></a>
+					<h1 class="title"></h1>
+					<a data-icon="arrow-r" data-iconpos="notext" class="next"></a>
+				</div>
+				<div id="header-charts" class="ui-bar-b header"  data-role="header" style="display: none;">
+					<a class="to-page" target="list" data-icon="back">返回</a>
+					<h1 class="title"></h1>
+				</div>
+				<div id="header-information" class="ui-bar-b header" data-role="header" style="display: none;">
+					<h1>有用資料</h1>
+				</div>
+				<div id="header-swimming-pools" class="ui-bar-b header"  data-role="header" style="display: none;">
+					<a class="to-page" target="information" data-icon="back">返回</a>
+					<h1>公眾游泳池資料</h1>
+				</div>
+				<div id="header-areahk" class="ui-bar-b header"  data-role="header" style="display: none;">
+					<a class="to-page" target="swimming-pools" data-icon="back">返回</a>
+					<h1>香港島</h1>
+				</div>
+				<div id="header-areakln" class="ui-bar-b header"  data-role="header" style="display: none;">
+					<a class="to-page" target="swimming-pools" data-icon="back">返回</a>
+					<h1>九龍區</h1>
+				</div>
+				<div id="header-areant" class="ui-bar-b header"  data-role="header" style="display: none;">
+					<a class="to-page" target="swimming-pools" data-icon="back">返回</a>
+					<h1>新界區</h1>
+				</div>
+				<div id="header-pool" class="ui-bar-b header"  data-role="header" style="display: none;">
+					<a class="to-page" target="" data-icon="back">返回</a>
+					<h1></h1>
+				</div>
+				<div id="header-swimming-tips" class="ui-bar-b header"  data-role="header" style="display: none;">
+					<a class="to-page" target="information" data-icon="back">返回</a>
+					<h1>游泳謬誤逐點捉</h1>
+				</div>
+				<div id="header-faq" class="ui-bar-b header"  data-role="header" style="display: none;">
+					<a class="to-page" target="information" data-icon="back">返回</a>
+					<h1>常見問題</h1>
+				</div>
+				<div id="header-about" class="ui-bar-b header" data-role="header" style="display: none;">
+					<h1>關於卓毅</h1>
+				</div>
+				<div id="header-register" class="ui-bar-b header" data-role="header" style="display: none;">
+					<h1>立即報名</h1>
 				</div>
 				<div data-theme="b" data-role="content">
 					<div>
@@ -452,9 +512,9 @@
 							</div>
 						</div>
 						<div id="records" class="page" style="display: none;">
-							<a class="to-page" target="create" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">新增記錄</a>
-							<a class="to-page" target="calendar" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">我的月曆</a>
-							<a class="to-page" target="list" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">累積消耗卡路里</a>
+							<a class="to-create" target="create" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">新增記錄</a>
+							<a class="to-calendar" target="calendar" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">我的月曆</a>
+							<a class="to-list" target="list" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="none">累積消耗卡路里</a>
 						</div>
 						<div id="create" class="page page-with-padding"" style="display: none;">
 							<div data-role="fieldcontain">

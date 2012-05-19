@@ -2,6 +2,30 @@
   swim.records = {
     current_date: new Date,
     initiate: function() {
+      $("#records .to-create").bind("click", _.bind(function() {
+        swim.records.create.render();
+        $(".header").hide();
+        $(".header#header-create").show();
+        $(".page#records").hide();
+        $(".page#create").show();
+        swim.content.myScroll.refresh();
+      }, this));
+      $("#records .to-calendar").bind("click", _.bind(function() {
+        swim.records.calendar.render();
+        $(".header").hide();
+        $(".header#header-calendar").show();
+        $(".page#records").hide();
+        $(".page#calendar").show();
+        swim.content.myScroll.refresh();
+      }, this));
+      $("#records .to-list").bind("click", _.bind(function() {
+        swim.records.list.render();
+        $(".header").hide();
+        $(".header#header-list").show();
+        $(".page#records").hide();
+        $(".page#list").show();
+        swim.content.myScroll.refresh();
+      }, this));
       this.calendar.initiate();
       this.charts.initiate();
       this.create.initiate();

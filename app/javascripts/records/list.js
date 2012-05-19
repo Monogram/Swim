@@ -2,7 +2,7 @@
   swim.records.list = {
     initiate: function() {
       $(document).bind( "pageinit", _.bind(function(){
-        $("#list .prev").unbind("click").bind("click", _.bind(function() {
+        $("#header-list .prev").unbind("click").bind("click", _.bind(function() {
           var date = swim.records.current_date;
           var month = date.getMonth();
           var year = date.getFullYear();
@@ -14,7 +14,7 @@
           this.render();
         }, this));
 
-        $("#list .next").unbind("click").bind("click", _.bind(function() {
+        $("#header-list .next").unbind("click").bind("click", _.bind(function() {
           var date = swim.records.current_date;
           var month = date.getMonth();
           var year = date.getFullYear();
@@ -27,7 +27,9 @@
         }, this));
 				
 				$("#list .to-charts").unbind("click").bind("click", _.bind(function() {
-          swim.records.charts.render();
+          swim.records.charts.render();					
+          $(".header").hide();
+          $(".header#header-charts").show();
           $(".page#list").hide();
           $(".page#charts").show();
           swim.content.myScroll.refresh();
@@ -41,7 +43,7 @@
       var date = swim.records.current_date;
       var month = date.getMonth();
       var year = date.getFullYear();
-      $("#list .title").text(year + "年" +(month + 1) + "月");
+      $("#header-list .title").text(year + "年" +(month + 1) + "月");
 			var month_records = this.getMonthRecords(year, month);
       var total_meters = _.reduce(month_records, function(total_meters, month_record) {
         return total_meters + _.reduce(month_record.records, function(total_meters, record) {
