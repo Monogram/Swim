@@ -2,6 +2,16 @@
   padding: 15px;
 }
 
+#schedule .schedule-form {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: -15px;
+  padding: 10px;
+}
+
+#schedule .schedule-form label {
+  font-weight: bold;
+}
+
 #schedule .schedule,
 #schedule .schedule a{
   color: #FFFFFF
