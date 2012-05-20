@@ -27,7 +27,6 @@
         swim.content.myScroll.refresh();
       }, this));
       this.calendar.initiate();
-      this.charts.initiate();
       this.create.initiate();
       this.list.initiate();
       delete this.initiate;

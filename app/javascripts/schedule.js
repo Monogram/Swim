@@ -44,9 +44,6 @@
       $("#schedule").bind("pageinit", _.bind(this.render, this));
       delete this.initiate;
     },
-    strToBig5: function(str) {
-      return EncodedUTF8ToBig5(encodeURIComponent(str));
-    },
     render: function() {
       var schedule = swim.storage.get("schedule") || {};
       _.each(schedule, function(checked, id) {

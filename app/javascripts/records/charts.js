@@ -1,10 +1,5 @@
 ﻿(function(swim) {
   swim.records.charts = {
-    initiate: function() {
-      //$("#charts").bind("pageshow", _.bind(this.render, this));
-      delete this.initiate;
-    },
-
     getCumulativeCalories: function(year, month) {
       var cumulative_calories = 0;
       return _.map(_.range(1, swim.records.getDaysInMonth(year, month) + 1), function(date) {

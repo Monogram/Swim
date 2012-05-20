@@ -7,10 +7,6 @@
           var obj = $(event.target).closest("a");
           $(".ui-footer .ui-navbar li a").removeClass("ui-btn-active");
           obj.addClass("ui-btn-active");
-
-//          $(".page").hide();
-//          $(".page#" + obj.attr("target")).show();
-//          swim.content.myScroll.refresh();
         });
       }, this));
       delete this.initiate;
