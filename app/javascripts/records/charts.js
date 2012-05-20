@@ -98,7 +98,7 @@
       this.context.textAlign = "end";
       this.context.textBaseline = "middle";
 			for (var i = 0; i < this.YTick.length; ++i) {
-        this.context.fillText(this.YTickLabel[i], this.paddingTop - this.space, this.canvas.width - this.getX(this.YTick[i]));
+        this.context.fillText(Math.round(this.YTickLabel[i]), this.paddingTop - this.space, this.canvas.width - this.getX(this.YTick[i]));
       }
       this.context.restore();
     },

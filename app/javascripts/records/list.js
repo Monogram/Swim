@@ -57,7 +57,7 @@
 			}, 0);
       $("#list .records").empty().append(
         _.flatten(this.renderRecords(month_records)).concat(
-          $("<li data-role=\"list-divider\"><span>共" + total_meters + "米</span><span style=\"float: right;\">共" + total_calories + "卡</span></li>").get(0)
+          $("<li data-role=\"list-divider\"><span>共" + total_meters + "米</span><span style=\"float: right;\">共" + Math.round(total_calories) + "卡</span></li>").get(0)
 				)
       ).listview("refresh");
     },	
@@ -87,7 +87,7 @@
 					"butterfly-stroke": "蝶泳",
 					"other": "其他"
 				}[record.stroke];
-			  lis.push($("<li stroke=\"" + record.stroke + "\"><span>" + record.meters + "米" + stroke + " (" + record.minutes + "分鐘)</span><span style=\"float: right;\">" + swim.records.calculateCalories(record) + "卡</span></li>").get(0));
+			  lis.push($("<li stroke=\"" + record.stroke + "\"><span>" + record.meters + "米" + stroke + " (" + record.minutes + "分鐘)</span><span style=\"float: right;\">" + Math.round(swim.records.calculateCalories(record)) + "卡</span></li>").get(0));
 			});
       return lis;
 		}
