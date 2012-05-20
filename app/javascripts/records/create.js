@@ -31,6 +31,8 @@
           swim.storage.set("records", records);
 
           swim.records.calendar.render();
+          $(".header").hide();
+          $(".header#header-calendar").show();
           $(".page#create").hide();
           $(".page#calendar").show();
           swim.content.myScroll.refresh();
