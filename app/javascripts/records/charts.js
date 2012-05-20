@@ -138,7 +138,7 @@
 			this.x = _.range(1, swim.records.getDaysInMonth(year, month) + 1);
 			this.y = this.getCumulativeCalories(year, month);
 			this.xlim = [_.min(this.x), _.max(this.x)];
-			this.ylim = [_.min(this.y), _.max(this.y)];
+			this.ylim = [0, _.max(this.y)];
 			this.XTick = this.x;
 			this.XTickLabel = _.map(this.XTick, function(date) {
 			  var suffix = ["th", "st", "nd", "rd"];
