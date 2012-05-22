@@ -12,10 +12,13 @@
   height: 40px;
   width: 40px;
 }
+.ui-footer .ui-navbar .ui-btn-up-a {
+  background: none repeat scroll 0 0 #000000;
+}
 
 .ui-footer .ui-navbar .ui-btn-active {
-  background: -moz-linear-gradient(#666666, #444444) repeat scroll 0 0 #444444;
-  background-image: -webkit-gradient(linear,left top,left bottom,from(#666666),to(#444444));
+  background: -moz-linear-gradient(#555555, #333333) repeat scroll 0 0 #333333;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#555555),to(#333333));
   border: 0 none !important;
   box-shadow: 0 0 12px transparent !important;
 }
