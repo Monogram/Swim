@@ -24,6 +24,7 @@
         $(".page#" + obj.attr("target")).show();
 
         swim.content.myScroll.refresh();
+        swim.content.myScroll.scrollTo(0, 0, 0);
       });
       $(".refresh-iscroll, .ui-collapsible").bind("click", function(event) {
         _.defer(function() {
