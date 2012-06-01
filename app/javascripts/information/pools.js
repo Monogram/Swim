@@ -15,6 +15,7 @@
 
           $(".page").hide();
           $(".page#pool").show();
+					swim.content.resizeBackground();
           swim.content.myScroll.refresh();
         });
       });

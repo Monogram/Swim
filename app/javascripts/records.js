@@ -8,6 +8,7 @@
         $(".header#header-create").show();
         $(".page#records").hide();
         $(".page#create").show();
+				swim.content.resizeBackground();
         swim.content.myScroll.refresh();
       }, this));
       $("#records .to-calendar").bind("click", _.bind(function() {
@@ -16,6 +17,7 @@
         $(".header#header-calendar").show();
         $(".page#records").hide();
         $(".page#calendar").show();
+				swim.content.resizeBackground();
         swim.content.myScroll.refresh();
       }, this));
       $("#records .to-list").bind("click", _.bind(function() {
@@ -24,6 +26,7 @@
         $(".header#header-list").show();
         $(".page#records").hide();
         $(".page#list").show();
+				swim.content.resizeBackground();
         swim.content.myScroll.refresh();
       }, this));
       this.calendar.initiate();

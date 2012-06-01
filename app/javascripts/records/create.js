@@ -35,6 +35,7 @@
           $(".header#header-calendar").show();
           $(".page#create").hide();
           $(".page#calendar").show();
+					swim.content.resizeBackground();
           swim.content.myScroll.refresh();
         }, this));
         this.render();

@@ -8,6 +8,7 @@
 					$(".header#header-create").show();
 					$(".page#calendar").hide();
 					$(".page#create").show();
+					swim.content.resizeBackground();
 					swim.content.myScroll.refresh();
 				}, this));
         $("#calendar .records li").live("click", _.bind(function(event) {

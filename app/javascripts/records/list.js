@@ -32,6 +32,7 @@
           $(".header#header-charts").show();
           $(".page#list").hide();
           $(".page#charts").show();
+					swim.content.resizeBackground();
           swim.content.myScroll.refresh();
         }, this));
 				
