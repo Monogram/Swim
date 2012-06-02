@@ -33,6 +33,9 @@
           swim.content.myScroll.refresh();
         });
       });
+      $("div.ui-slider").bind("focus", function(event) {
+        event.preventDefault();
+      });
     },
     initiateIScroll: function() {
       if (this.myScroll) {
