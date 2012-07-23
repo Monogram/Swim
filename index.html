@@ -776,7 +776,7 @@
 			</div>
 		</div>
     <script>
-      swim.initiate();
+      document.addEventListener("deviceready", _.bind(swim.initiate, swim), false);
     </script>
 	</body>
 </html>
