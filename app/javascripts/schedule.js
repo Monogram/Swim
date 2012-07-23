@@ -41,7 +41,7 @@
           window.location.href = mailto;
         }, this));
       }, this));
-      $("#schedule").bind("pageinit", _.bind(this.render, this));
+      $(document).bind("pageinit", _.bind(this.render, this));
       delete this.initiate;
     },
     render: function() {
