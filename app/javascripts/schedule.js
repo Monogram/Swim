@@ -1,13 +1,12 @@
 (function(swim) {
   swim.schedule = {
+    assessment: {},
     initiate: function() {
       $(document).bind( "pageinit", _.bind(function(){
-        $("#schedule input[type=checkbox]").unbind("change").bind("change", function(event) {
+        $("#schedule input[type=checkbox]").unbind("change").bind("change", _.bind(function(event) {
           var checkbox = $(event.target).closest("input[type=checkbox]");
-          var schedule = swim.storage.get("schedule") || {};
-          schedule[checkbox.attr("id").replace(/schedule-/, "")] = checkbox.is(":checked");
-          swim.storage.set("schedule", schedule);
-        });
+          this.assessment[checkbox.attr("id").replace(/schedule-/, "")] = checkbox.is(":checked");
+        }, this));
 
         $("#schedule .schedule").unbind("click").bind("click", function(event) {
           var li = $(event.target).closest(".schedule");
@@ -24,13 +23,12 @@
           mailto += encodeURI("年齡: " + $("#schedule #age").val()) + "%0A";
           mailto += "%0A";
           mailto += encodeURI("已選項目:") + "%0A";
-          var schedule = swim.storage.get("schedule") || {};
           for (var i = 1; i <= 7; ++i) {
             mailto += "%0A";
             mailto += encodeURI($(".schedule-" + i + " .ui-link-inherit").text().trim()) + "%0A";
             var index = 0;
             for (var j = 1; j <= 6; ++j) {
-              if (schedule[i + "-" + j]) {
+              if (this.assessment[i + "-" + j]) {
                 mailto += (++index) + ".%20" + encodeURI($("label[for=schedule-" + i + "-" + j + "] .ui-btn-text").text().trim()) + "%0A";
               }
 					  }
@@ -41,14 +39,7 @@
           window.location.href = mailto;
         }, this));
       }, this));
-      $(document).bind("pageinit", _.bind(this.render, this));
       delete this.initiate;
-    },
-    render: function() {
-      var schedule = swim.storage.get("schedule") || {};
-      _.each(schedule, function(checked, id) {
-        $("#schedule-" + id).attr("checked", checked).checkboxradio("refresh");
-      });
     }
   };
 })(swim);
