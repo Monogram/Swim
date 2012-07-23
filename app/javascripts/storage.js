@@ -1,10 +1,10 @@
-(function(swim, localStorage) {
+(function(swim) {
   swim.storage = {
     set: function(key, value) {
-      return localStorage.setItem(key, JSON.stringify(value));
+      return window.localStorage.setItem(key, JSON.stringify(value));
     },
     get: function(key) {
-      return JSON.parse(localStorage.getItem(key));
+      return JSON.parse(window.localStorage.getItem(key));
     }
   };
-})(swim, localStorage);
+})(swim);
