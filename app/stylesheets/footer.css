@@ -24,21 +24,41 @@
 }
 
 .ui-footer .ui-navbar .footer-schedule .ui-icon {
-  background-image:  url(../images/footer/schedule.png);
+  background-image:  url(../images/footer/800x800/schedule.png);
 }
 
 .ui-footer .ui-navbar .footer-records .ui-icon {
-  background-image:  url(../images/footer/records.png);
+  background-image:  url(../images/footer/800x800/records.png);
 }
 
 .ui-footer .ui-navbar .footer-information .ui-icon {
-  background-image:  url(../images/footer/information.png);
+  background-image:  url(../images/footer/800x800/information.png);
 }
 
 .ui-footer .ui-navbar .footer-about .ui-icon {
-  background-image:  url(../images/footer/about.png);
+  background-image:  url(../images/footer/800x800/about.png);
 }
 
 .ui-footer .ui-navbar .footer-register .ui-icon {
-  background-image:  url(../images/footer/register.png);
+  background-image:  url(../images/footer/800x800/register.png);
+}
+
+.ui-footer .ui-navbar .footer-schedule.ipad-icon .ui-icon {
+  background-image:  url(../images/footer/50x50/schedule.png);
+}
+
+.ui-footer .ui-navbar .footer-records.ipad-icon .ui-icon {
+  background-image:  url(../images/footer/50x50/records.png);
+}
+
+.ui-footer .ui-navbar .footer-information.ipad-icon .ui-icon {
+  background-image:  url(../images/footer/50x50/information.png);
+}
+
+.ui-footer .ui-navbar .footer-about.ipad-icon .ui-icon {
+  background-image:  url(../images/footer/50x50/about.png);
+}
+
+.ui-footer .ui-navbar .footer-register.ipad-icon .ui-icon {
+  background-image:  url(../images/footer/50x50/register.png);
 }

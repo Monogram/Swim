@@ -8,6 +8,10 @@
           $(".ui-footer .ui-navbar li a").removeClass("ui-btn-active");
           obj.addClass("ui-btn-active");
         });
+
+        if (navigator.userAgent.indexOf("iPad") != -1) {
+          $(".ui-footer .ui-navbar li a").addClass("ipad-icon");
+        }
       }, this));
       delete this.initiate;
     }
